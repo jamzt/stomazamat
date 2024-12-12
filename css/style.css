@@ -157,6 +157,25 @@ h6,
     height: 3rem;
 }
 
+@media (max-width: 767px) {
+    .navbar-nav {
+        display: flex;
+        flex-direction: row; /* Align items horizontally */
+        justify-content: center; /* Center align items */
+        width: 100%;
+    }
+
+    .nav-item {
+        padding: 10px 15px; /* Add padding for better spacing */
+        text-align: center;
+    }
+
+    .navbar-brand {
+        flex-grow: 1;
+        text-align: center;
+    }
+}
+
 @media (min-width: 991.98px) {
     .banner {
         position: relative;
