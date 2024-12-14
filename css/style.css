@@ -342,3 +342,26 @@ h6,
     width: 120px;
     height: 120px;
 }
+
+body {
+    font-size: 16px;
+}
+
+h1 {
+    font-size: 2rem; /* Adjust for responsiveness */
+}
+
+button {
+    padding: 12px 20px;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .hero-text {
+        font-size: 1.5rem;
+    }
+
+    .header {
+        padding: 10px;
+    }
+}

@@ -9,7 +9,7 @@
     <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
-    <link href="/favicon_io/favicon.ico" rel="icon">
+    <link href="/favicon_io/favicon.ico" rel="icon" type="image/x-icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -30,6 +30,9 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
     <style>
         /* Fullscreen Video Background */
@@ -56,7 +59,7 @@
     </style>
     <!-- Video Background -->
     <video class="video-background" autoplay muted loop slow data-wow-delay="10s">
-        <source src="img/5356209-uhd_2160_3840_25fps.mp4" type="video/mp4">
+        <source src="img/5356209-uhd_2160_3840_25fps.mp4" class="img-fluid" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 </head>
@@ -111,19 +114,18 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto py-0">
-                <a href="index.html" class="nav-item nav-link">Главное</a>
-                <a href="about.html" class="nav-item nav-link">О клинике</a>
-                <a href="service.html" class="nav-item nav-link active">Услуги</a>
-                <a href="contact.html" class="nav-item nav-link">Контакты</a>
-            </div>
-           <!-- WhatsApp Link -->
-            <a href="https://wa.me/789529355454" target="_blank" class="ms-3 d-flex align-items-center text-decoration-none">
-                <i class="fab fa-whatsapp fs-3" style="color: #25D366;"></i>
-            </a>
+        <div class="navbar-nav ms-auto py-0">
+            <a href="index.html" class="nav-item nav-link">Главное</a>
+            <a href="about.html" class="nav-item nav-link">О клинике</a>
+            <a href="service.html" class="nav-item nav-link">Услуги</a>
+            <a href="contact.html" class="nav-item nav-link active">Контакты</a>
         </div>
-            <a href="appointment.html" class="btn btn-primary py-2 px-4 ms-3">ЗАПИСАТЬСЯ НА ПРИЁМ</a>
+           <!-- WhatsApp Link -->
+        <a href="https://wa.me/789529355454" target="_blank" class="ms-3 d-flex align-items-center text-decoration-none">
+            <i class="fab fa-whatsapp fs-3" style="color: #25D366;"></i>
+        </a>
+        
+        <a href="appointment.html" class="btn btn-primary py-2 px-4 ms-3">ЗАПИСАТЬСЯ НА ПРИЁМ</a>
             
     </nav>
     <!-- Navbar End -->
@@ -151,8 +153,8 @@
     <!-- Hero Start -->
     <div class="container-fluid bg-primary py-5 hero-header mb-5">
         <div class="row py-3">
-            <div class="col-12 text-center">
-                <img class="img-fluid" src="img/4489255-uhd_3840_2160_25fps.mp4" alt="">
+            <div class="col-12 col-sm-12 text-center">
+                <img class="img-fluid" class="img-fluid" src="img/4489255-uhd_3840_2160_25fps.mp4" alt="">
                 <h1 class="display-3 text-white animated zoomIn">УСЛУГИ</h1>
             </div>
         </div>
@@ -172,7 +174,7 @@
         </style>
         
         <div class="container-fluid">
-            <div class="col-lg-12">
+            <div class="col-lg-12 col-sm-12"">
                 <div class="row g-5">
                     <div class="col-md-4 service-item wowvzoomIi" data-wow-delay="0.6s">
                         <div class="rounded-top overflow-hidden">
@@ -293,8 +295,7 @@
     <div class="container-fluid text-light py-5 wow fadeInUp" data-wow-delay="0.3s" style="background-color: rgba(0, 0, 0, 0.2); margin-top: 50px;">
         <div class="container pt-5">
             <div class="row g-5 pt-4">
-                <div class="col-lg-3 col-md-4
-                ">
+                <div class="col-lg-3 col-md-6">
                     <!-- <h3 class="text-white mb-4">Перейти</h3> -->
                     <br>
                     <br>
@@ -306,7 +307,7 @@
                     </div>
                 </div>
         
-                <div class="col-lg-6">
+                <div class="col-lg-6 col-sm-12"">
                     <h3 class="text-white text-center mb-2">Наши клиники</h3>
                     <div class="row">
                         <div class="col-md-4
