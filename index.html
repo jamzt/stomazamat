@@ -197,16 +197,19 @@
                                             <option value="Ата-Бала">Ата-Бала</option>
                                         </select>
                                     </div>
-                                    
+                            
                                     <!-- Name Input -->
                                     <div class="col-12 col-sm-12">
-                                        <input type="text" name="name" class="form-control bg-light border-0 text-left" placeholder="Как вас зовут?" style="height: 55px;">
+                                        <input type="text" name="name" class="form-control bg-light border-0 text-left" placeholder="Как вас зовут?" style="height: 55px;" required>
                                     </div>
-                                    
+                            
                                     <!-- Phone Input -->
                                     <div class="col-12 col-sm-12">
-                                        <input type="tel" name="phone" class="form-control bg-light border-0 text-left" placeholder="Ваш номер" style="height: 55px;">
+                                        <input type="tel" name="phone" class="form-control bg-light border-0 text-left" placeholder="Ваш номер" style="height: 55px;" required>
                                     </div>
+                            
+                                    <!-- Hidden Input to Specify Email Address -->
+                                    <input type="hidden" name="_replyto" value="stomazamat@gmail.com">
                             
                                     <!-- Submit Button -->
                                     <div class="col-12 col-sm-12">
