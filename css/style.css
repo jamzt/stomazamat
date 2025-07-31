@@ -100,6 +100,7 @@ h6,
     transform: skew(40deg);
 }
 
+/* Navbar link fix for "About" breaking */
 .navbar-light .navbar-nav .nav-link {
     font-family: 'Jost', sans-serif;
     padding: 35px 15px;
@@ -107,6 +108,7 @@ h6,
     color: var(--dark);
     outline: none;
     transition: .5s;
+    white-space: nowrap; /* Prevent breaking into 2 lines */
 }
 
 .sticky-top.navbar-light .navbar-nav .nav-link {
@@ -124,6 +126,11 @@ h6,
         padding: 10px 0;
     }
 }
+
+.carousel-item {
+    transition: opacity 1.5s ease-in-out; /* smooth fade between slides */
+}
+
 
 .carousel-caption {
     top: 0;
@@ -160,13 +167,13 @@ h6,
 @media (max-width: 767px) {
     .navbar-nav {
         display: flex;
-        flex-direction: row; /* Align items horizontally */
-        justify-content: center; /* Center align items */
+        flex-direction: row;
+        justify-content: center;
         width: 100%;
     }
 
     .nav-item {
-        padding: 10px 15px; /* Add padding for better spacing */
+        padding: 10px 15px;
         text-align: center;
     }
 
@@ -241,7 +248,7 @@ h6,
     bottom: 0;
     left: 15px;
     right: 15px;
-    border-radius:100px / 15px;
+    border-radius: 100px / 15px;
     box-shadow: 0 0 15px rgba(0, 0, 0, .7);
     opacity: 0;
     transition: .5s;
@@ -254,7 +261,7 @@ h6,
 }
 
 .bg-offer {
-    background:url(../img/carousel-1.jpg) center center no-repeat;
+    background: url(../img/carousel-1.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -343,12 +350,46 @@ h6,
     height: 120px;
 }
 
+/* Ensure contact box text stays inside */
+.contact-info {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Clickable email/phone */
+.contact-info a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
+
+/* Formspree success/error alert styling */
+.alert {
+    border-radius: 6px;
+    font-size: 0.95rem;
+    padding: 12px 15px;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
 body {
     font-size: 16px;
 }
 
 h1 {
-    font-size: 2rem; /* Adjust for responsiveness */
+    font-size: 2rem;
 }
 
 button {

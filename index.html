@@ -200,38 +200,77 @@
 
                         <div class="appointment-form text-center p-4 wow zoomIn" data-wow-delay="0.6s">
                             <h2 class="text-white mb-4">Записаться на приём</h2>
-                            <form action="https://formspree.io/f/xovqzogw" method="POST">
+                        
+                            <!-- Success Message -->
+                            <div id="formSuccess" class="alert alert-success d-none" role="alert">
+                                ✅ Спасибо! Ваша заявка принята. Мы свяжемся с вами в ближайшее время.
+                            </div>
+                        
+                            <!-- Error Message -->
+                            <div id="formError" class="alert alert-danger d-none" role="alert">
+                                ❌ Ошибка! Пожалуйста, попробуйте ещё раз.
+                            </div>
+                        
+                            <form id="appointmentForm" action="https://formspree.io/f/xovqzogw" method="POST">
                                 <div class="row g-3">
                                     <!-- Clinic Selection -->
                                     <div class="col-12 col-sm-12">
-                                        <select name="clinic" class="form-select bg-light border-0 text-center" style="height: 55px;">
-                                            <option selected>Выбрать клинику</option>
+                                        <select name="clinic" class="form-select bg-light border-0 text-center" style="height: 55px;" required>
+                                            <option value="" selected disabled>Выбрать клинику</option>
                                             <option value="Азамат">Азамат</option>
                                             <option value="Ата-Бала">Ата-Бала</option>
                                         </select>
                                     </div>
-                            
+                        
                                     <!-- Name Input -->
                                     <div class="col-12 col-sm-12">
                                         <input type="text" name="name" class="form-control bg-light border-0 text-left" placeholder="Как вас зовут?" style="height: 55px;" required>
                                     </div>
-                            
+                        
                                     <!-- Phone Input -->
                                     <div class="col-12 col-sm-12">
                                         <input type="tel" name="phone" class="form-control bg-light border-0 text-left" placeholder="Ваш номер" style="height: 55px;" required>
                                     </div>
-                            
-                                    <!-- Hidden Input to Specify Email Address -->
+                        
+                                    <!-- Hidden Input for Reply Email -->
                                     <input type="hidden" name="_replyto" value="stomazamat@gmail.com">
-                            
+                        
                                     <!-- Submit Button -->
                                     <div class="col-12 col-sm-12">
                                         <button class="btn btn-primary w-100 py-3" type="submit">Отправить заявку</button>
                                     </div>
                                 </div>
                             </form>
-                            
                         </div>
+                        
+                        <!-- AJAX Script for Confirmation Message -->
+                        <script>
+                        document.getElementById("appointmentForm").addEventListener("submit", function(event) {
+                            event.preventDefault();
+                        
+                            let form = event.target;
+                            let formData = new FormData(form);
+                        
+                            fetch(form.action, {
+                                method: form.method,
+                                body: formData,
+                                headers: { 'Accept': 'application/json' }
+                            }).then(response => {
+                                if (response.ok) {
+                                    document.getElementById("formSuccess").classList.remove("d-none");
+                                    document.getElementById("formError").classList.add("d-none");
+                                    form.reset();
+                                } else {
+                                    document.getElementById("formError").classList.remove("d-none");
+                                    document.getElementById("formSuccess").classList.add("d-none");
+                                }
+                            }).catch(() => {
+                                document.getElementById("formError").classList.remove("d-none");
+                                document.getElementById("formSuccess").classList.add("d-none");
+                            });
+                        });
+                        </script>
+                        
                             
                     </div>
                 <!-- Appointment Section End -->
@@ -270,12 +309,10 @@
 
 
 
+  
     <!-- Service Carousel Start -->
-    <div id="serviceCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+    <div id="serviceCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
 
-        <!-- Carousel Indicators -->
-    <!-- Service Carousel Start -->
-    <div id="serviceCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
 
         <!-- Carousel Indicators -->
         <div class="carousel-indicators">
@@ -489,7 +526,7 @@
         <div class="container">
             <div class="row g-0">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-md-0">&copy; <a class="text-white border-bottom" href="#">Стоматология Азамат</a> 2010 - 2024 Россия, г. Новосибирск, Улица Бориса Богаткова, 248а / улица Кошурникова, 45/1 </p>
+                    <p class="mb-md-0">&copy; <a class="text-white border-bottom" href="#">Стоматология Азамат</a> 2010 - 2025 Россия, г. Новосибирск, Улица Бориса Богаткова, 248а / улица Кошурникова, 45/1 </p>
                 </div>
             </div>
         </div>
