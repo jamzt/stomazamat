@@ -63,15 +63,22 @@
                 </div>
             </div>
             <div class="col-md-6 text-center text-lg-end">
-                <div class="d-inline-flex align-items-center bg-primary text-white px-5">
-                    <div class="me-3 pe-3 border-end py-2">
-                        <i class="fa fa-envelope-open me-2"></i>stomazamat@gmail.com
+                <div class="d-inline-flex align-items-center bg-primary text-white px-4">
+                    <div class="me-3 pe-3 border-end">
+                        <i class="fa fa-envelope-open me-2"></i>
+                        <a href="mailto:stomazamat@gmail.com" class="text-white text-decoration-none">
+                            stomazamat@gmail.com
+                        </a>
                     </div>
-                    <div class="py-2">
-                        <i class="fa fa-phone-alt me-2"></i>+7 895 293 55454
+                    <div>
+                        <i class="fa fa-phone-alt me-2"></i>
+                        <a href="tel:+789529355454" class="text-white text-decoration-none">
+                            +7 895 293 55454
+                        </a>
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
 
@@ -101,11 +108,22 @@
             </div>
         </div>
     </div>
-
+    
     <!-- Appointment Form -->
     <div class="container mb-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="p-5 bg-light rounded shadow-lg">
-            <form action="https://formspree.io/f/xovqzogw" method="POST">
+    
+            <!-- Success Message -->
+            <div id="formSuccess" class="alert alert-success d-none" role="alert">
+                ✅ Спасибо! Ваша заявка принята. Мы свяжемся с вами в ближайшее время.
+            </div>
+    
+            <!-- Error Message -->
+            <div id="formError" class="alert alert-danger d-none" role="alert">
+                ❌ Ошибка! Пожалуйста, попробуйте ещё раз.
+            </div>
+    
+            <form id="appointmentForm" action="https://formspree.io/f/xovqzogw" method="POST">
                 <div class="mb-3">
                     <select name="clinic" class="form-select" required>
                         <option value="">Выбрать клинику</option>
@@ -126,12 +144,39 @@
                     <textarea name="message" class="form-control" placeholder="Комментарий или вопрос" rows="3"></textarea>
                 </div>
                 <input type="hidden" name="_subject" value="Новая заявка с сайта Стоматология Азамат">
-                <input type="hidden" name="_redirect" value="https://yoursite.com/thank-you.html">
                 <button type="submit" class="btn btn-primary w-100 py-3">Отправить заявку</button>
             </form>
         </div>
     </div>
-
+    
+    <!-- AJAX Script for Confirmation Message -->
+    <script>
+    document.getElementById("appointmentForm").addEventListener("submit", function(event) {
+        event.preventDefault();
+    
+        let form = event.target;
+        let formData = new FormData(form);
+    
+        fetch(form.action, {
+            method: form.method,
+            body: formData,
+            headers: { 'Accept': 'application/json' }
+        }).then(response => {
+            if (response.ok) {
+                document.getElementById("formSuccess").classList.remove("d-none");
+                document.getElementById("formError").classList.add("d-none");
+                form.reset();
+            } else {
+                document.getElementById("formError").classList.remove("d-none");
+                document.getElementById("formSuccess").classList.add("d-none");
+            }
+        }).catch(() => {
+            document.getElementById("formError").classList.remove("d-none");
+            document.getElementById("formSuccess").classList.add("d-none");
+        });
+    });
+    </script>
+    
     <!-- Footer -->
     <div class="container-fluid text-light py-5" style="background-color: rgba(0, 0, 0, 0.2);">
         <div class="container">

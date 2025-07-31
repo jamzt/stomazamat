@@ -1,21 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="utf-8">
-    <title>Стоматология Азамат</title>
+    <title>Стоматология Азамат — Контакты</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
     <link href="/favicon_io/favicon.ico" rel="icon" type="image/x-icon">
 
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
 
-    <!-- Icon Font Stylesheet -->
+    <!-- Icons & Libraries -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
@@ -25,278 +22,170 @@
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
     <link href="lib/twentytwenty/twentytwenty.css" rel="stylesheet" />
 
-    <!-- Customized Bootstrap Stylesheet -->
+    <!-- Bootstrap & Custom Styles -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-   
-   <style>
-        /* Fullscreen Video Background */
+    <style>
         .video-background {
             position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
             object-fit: cover;
-            z-index: -1; /* Place behind other elements */
-            opacity: 40%;
-            
-        }
-
-        /* Overlay for text readability */
-        .content-overlay {
-            position: relative;
-            z-index: 2;
-            color: white;
-            text-shadow: 1px 1px 3px black;
-            padding: 100px;
+            z-index: -1;
+            opacity: 0.4;
         }
     </style>
-    <video class="video-background" autoplay muted loop slow data-wow-delay="10s">
-        <source src="img/istockphoto-1424515510-640_adpp_is.mp4" class="img-fluid" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
 </head>
 
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary m-1" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-        <div class="spinner-grow text-dark m-1" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-        <div class="spinner-grow text-secondary m-1" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
+
+    <!-- Video Background -->
+    <video class="video-background" autoplay muted loop>
+        <source src="img/istockphoto-1424515510-640_adpp_is.mp4" type="video/mp4">
+    </video>
+
+    <!-- Spinner -->
+    <div id="spinner" class="show bg-white position-fixed w-100 vh-100 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary m-1"></div>
+        <div class="spinner-grow text-dark m-1"></div>
+        <div class="spinner-grow text-secondary m-1"></div>
     </div>
-    <!-- Spinner End -->
 
-
-        <!-- Topbar Start -->
+    <!-- Topbar -->
     <div class="container-fluid bg-light ps-5 pe-0 d-none d-lg-block">
         <div class="row gx-0">
-            <div class="col-md-6 col-sm-12 text-center text-lg-start mb-2 mb-lg-0">
+            <div class="col-md-6 text-center text-lg-start">
                 <div class="d-inline-flex align-items-center">
-                    <medium class="py-2"><i class="far fa-clock text-primary me-2"></i>Работаем Пн-Вс 09:00—21:00 без выходных</medium>
+                    <span class="py-2"><i class="far fa-clock text-primary me-2"></i>Пн-Вс 09:00—21:00 без выходных</span>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-12 text-center text-lg-end">
-                <div class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
-                    <div class="me-3 pe-3 border-end py-2">
-                        <p class="m-0"><i class="fa fa-envelope-open me-2"></i>stomazamat@gmail.com</p>
+            <div class="col-md-6 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center bg-primary text-white px-4">
+                    <div class="me-3 pe-3 border-end">
+                        <i class="fa fa-envelope-open me-2"></i>
+                        <a href="mailto:stomazamat@gmail.com" class="text-white text-decoration-none">
+                            stomazamat@gmail.com
+                        </a>
                     </div>
-                    <div class="py-2">
-                        <p class="m-0"><i class="fa fa-phone-alt me-2"></i>+789529355454</p> <!-- Will be updated -->
+                    <div>
+                        <i class="fa fa-phone-alt me-2"></i>
+                        <a href="tel:+789529355454" class="text-white text-decoration-none">
+                            +7 895 293 55454
+                        </a>
                     </div>
                 </div>
             </div>
+            
         </div>
     </div>
-    <!-- Topbar End -->
 
-    <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3">
         <a href="index.html" class="navbar-brand p-0 d-flex align-items-center">
-            <!-- Logo Image -->
             <img src="img/label2.jpg" alt="Logo" class="img-fluid me-3" style="height: 75px;">
-            <!-- Text Name -->
-            <h1 class="m-0 text-primary text-dark p-2.5">Стоматология Азамат</h1>
+            <h1 class="m-0 text-primary text-dark">Стоматология Азамат</h1>
         </a>
-        <!-- Removed navbar-toggler to prevent collapse on mobile -->
         <div class="navbar-nav ms-auto py-0">
             <a href="index.html" class="nav-item nav-link">Главное</a>
             <a href="about.html" class="nav-item nav-link">О клинике</a>
             <a href="service.html" class="nav-item nav-link">Услуги</a>
             <a href="contact.html" class="nav-item nav-link active">Контакты</a>
         </div>
-        <!-- WhatsApp Link -->
-        <a href="https://wa.me/789529355454" target="_blank" class="ms-3 d-flex align-items-center text-decoration-none">
+        <a href="https://wa.me/789529355454" target="_blank" class="ms-3">
             <i class="fab fa-whatsapp fs-3" style="color: #25D366;"></i>
         </a>
-        <a href="appointment.html" class="btn btn-primary py-2 px-4 ms-3">ЗАПИСАТЬСЯ НА ПРИЁМ</a>
+        <a href="appointment.html" class="btn btn-primary py-2 px-4 ms-3">ЗАПИСАТЬСЯ</a>
     </nav>
-    <!-- Navbar End -->
 
-
-
-    <!-- Full Screen Search Start -->
-    <div class="modal fade" id="searchModal" tabindex="-1">
-        <div class="modal-dialog modal-fullscreen">
-            <div class="modal-content" style="background: rgba(9, 30, 62, .7);">
-                <div class="modal-header border-0">
-                    <button type="button" class="btn bg-white btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body d-flex align-items-center justify-content-center">
-                    <div class="input-group" style="max-width: 600px;">
-                        <input type="text" class="form-control bg-transparent border-primary p-3" placeholder="Type search keyword">
-                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Full Screen Search End -->
-
-
-    <!-- Hero Start -->
+    <!-- Hero -->
     <div class="container-fluid bg-primary py-5 hero-header mb-5">
         <div class="row py-3">
-            <div class="col-12 col-sm-12 text-center">
+            <div class="col-12 text-center">
                 <h1 class="display-3 text-white animated zoomIn">КОНТАКТЫ И АДРЕС</h1>
-            
             </div>
         </div>
     </div>
-    <!-- Hero End -->
 
-    <!-- Contact Start -->
-    <div class="container-fluid py-5">
-        <br>
+    <!-- Contact Section -->
+    <div class="container mb-5">
+        <div class="row g-5">
+            <div class="col-xl-4 col-lg-4">
+                <div class="bg-light rounded p-4 h-100">
+                    <div class="container py-5">
+                        <div class="row justify-content-center">
+                            <!-- Frame with responsive column -->
+                            <div class="col-lg-8 col-md-10 col-12">
+                                <div class="contact-frame">
+                                    <div class="mb-3">
+                                        <i class="bi bi-geo-alt fs-1 text-primary me-2"></i>
+                                        <strong>Мы находимся:</strong>
+                                        <p class="mb-0">Ул. Бориса Богаткова, 248а / Кошурникова, 45/1, Новосибирск</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <i class="bi bi-envelope-open fs-1 text-primary me-2"></i>
+                                        <strong>Почта:</strong>
+                                        <p class="mb-0">stomazamat@gmail.com</p>
+                                    </div>
+                                    <div>
+                                        <i class="bi bi-phone-vibrate fs-1 text-primary me-2"></i>
+                                        <strong>Телефон / WhatsApp:</strong>
+                                        <p class="mb-1">+7 895 293 55454</p>
+                                        <a href="https://wa.me/789529355454" target="_blank">
+                                            <i class="fab fa-whatsapp fs-3" style="color: #25D366;"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <!-- Map 1 -->
+            <div class="col-xl-4 col-lg-4">
+                <iframe class="rounded w-100 h-100" style="min-height: 400px;"
+                    src="https://www.google.com/maps/embed?pb=!1m18!..."
+                    allowfullscreen="" loading="lazy"></iframe>
+                <h6 class="mt-2">СТОМАТОЛОГИЯ АЗАМАТ</h6>
+            </div>
+
+            <!-- Map 2 -->
+            <div class="col-xl-4 col-lg-4">
+                <iframe class="rounded w-100 h-100" style="min-height: 400px;"
+                    src="https://www.google.com/maps/embed?pb=!1m14!..."
+                    allowfullscreen="" loading="lazy"></iframe>
+                <h6 class="mt-2">СТОМАТОЛОГИЯ АТА-БАЛА</h6>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container-fluid text-light py-5" style="background-color: rgba(0,0,0,0.2);">
         <div class="container">
             <div class="row g-5">
-                <!-- Contact Information Column -->
-                <div class="col-xl-4 col-lg-4 wow slideInUp" data-wow-delay="0.1s">
-                    <div class="bg-light rounded h-100 p-5">
-                        <div class="d-flex align-items-center mb-2">
-                            <i class="bi bi-geo-alt fs-1 text-primary me-3"></i>
-                            <div class="text-start">
-                                <h6 class="mb-0">Мы находимся:</h6>
-                            <h4><span>Улица Бориса Богаткова, 248а / улица Кошурникова, 45/1 Новосибирск, Россия</span></h4>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center mb-2">
-                            <i class="bi bi-envelope-open fs-1 text-primary me-3"></i>
-                            <div class="text-start">
-                                <h6 class="mb-0">Написать нам:</h6>
-                                <h4><span>stomazamat@gmail.com</span></h4>
-                            </div>
-                        </div>
-                        <div class="d-flex align-items-center">
-                            <i class="bi bi-phone-vibrate fs-1 text-primary me-3"></i>
-                            <div class="text-start">
-                                <h6 class="mb-0">Позвонить/Написать по Whatsapp:</h6>
-                                <h4><span>+789529355454 (will update)</span></h4>
-                            </div>
-                            <br>
-                             <!-- WhatsApp Link -->
-                        <a href="https://wa.me/789529355454" target="_blank" class="ms-1 d-flex align-items-center text-decoration-none">
-                        <i class="fab fa-whatsapp fs-3" style="color: #25D366;"></i>
-                         </a>
-                        </div>
-                    </div>
-                </div>
-
-            <!-- First Map Column -->
-            
-            <div class="col-xl-4 col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-                <iframe class="position-relative rounded w-100 h-100"
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2286.339962533259!2d82.97583307795378!3d55.03725897282769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dfef5afefff71f%3A0x5c3dd5da4d299e63!2sUlitsa%20Koshurnikova%2C%2045%2F1%2C%20Novosibirsk%2C%20Novosibirskaya%20oblast&#39;%2C%20630089!5e0!3m2!1sen!2sru!4v1733650932156!5m2!1sen!2sru"
-                    frameborder="0" style="min-height: 400px; border:0;" allowfullscreen="" aria-hidden="false"
-                    tabindex="0"></iframe>
-                    <h6 bold>СТОМАТОЛОГИЯ АЗАМАТ </h6>
-            </div>
-
-            <!-- Second Map Column -->
-            
-            <div class="col-xl-4 col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-                <iframe class="position-relative rounded w-100 h-100"
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1942.500078025687!2d82.9982850368937!3d55.040751465862385!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dfef38cd0266e5%3A0x169d5ab31c942822!2sUlitsa%20Dovatora%2C%2025%2C%20Novosibirsk%2C%20Novosibirskaya%20oblast&#39;%2C%20Russia%2C%20630124!5e0!3m2!1sen!2sus!4v1733681257940!5m2!1sen!2sus"
-                loading="lazy" frameborder="0" style="min-height: 400px; border:0;" allowfullscreen="" aria-hidden="false"
-                tabindex="0"></iframe>
-                <h6>СТОМАТОЛОГИЯ АТА-БАЛА</h6>
-            </div>
-        </div>
-    </div>
-<!-- Contact End -->
-    
-
-    <!-- Footer Start -->
-    <div class="container-fluid text-light py-5 wow fadeInUp" data-wow-delay="0.3s" style="background-color: rgba(0, 0, 0, 0.2); margin-top: 50px;">>
-        <div class="container pt-5">
-            <div class="row g-5 pt-4">
-                <div class="col-lg-3 col-md-6">
-                    <!-- <h3 class="text-white mb-4">Перейти</h3> -->
-                    <br>
-                    <br>
-                    <div class="d-flex flex-column justify-content-start">
-                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Главное</a>
-                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>О клинике</a>
-                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Услуги</a>
-                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Контакты</a>
-                    </div>
-                </div>
-        
                 <div class="col-lg-6">
-                    <h3 class="text-white text-center mb-2">Наши клиники</h3>
-                    <div class="row">
-                        <div class="col-md-6 mb-4">
-                            <h5 class="text-white">Стоматология Азамат</h5>
-                            <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>Улица Бориса Богаткова, 248а / улица Кошурникова, 45/1, г. Новосибирск</p>
-                            <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>stomazamat@gmail.com</p>
-                            <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+789529355454</p>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <h5 class="text-white">Стоматология Ата-Бала</h5>
-                            <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>Ул. Доватора, 25, г. Новосибирск</p>
-                            <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>stomatabala@gmail.com</p>
-                            <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+789529355454</p>
-                        </div>
-                    </div>
+                    <h5 class="text-white">Стоматология Азамат</h5>
+                    <p><i class="bi bi-geo-alt text-primary me-2"></i>Ул. Бориса Богаткова, 248а / Кошурникова, 45/1, Новосибирск</p>
+                    <p><i class="bi bi-envelope-open text-primary me-2"></i>stomazamat@gmail.com</p>
+                    <p><i class="bi bi-telephone text-primary me-2"></i>+7 895 293 55454</p>
                 </div>
-                
-                
-                <div class="col-lg-3 col-md-6">
-                    <h3 class="text-white mb-4">Мы в социальных сетях</h3>
-                    <div class="d-flex">
-                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i class="fab fa-vk fw-normal"></i></a>
-                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                        <!-- <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a> -->
-                        <a class="btn btn-lg btn-primary btn-lg-square rounded" href="#"><i class="fab fa-instagram fw-normal"></i></a>
-                    </div>
+                <div class="col-lg-6">
+                    <h5 class="text-white">Стоматология Ата-Бала</h5>
+                    <p><i class="bi bi-geo-alt text-primary me-2"></i>Ул. Доватора, 25, Новосибирск</p>
+                    <p><i class="bi bi-envelope-open text-primary me-2"></i>stomatabala@gmail.com</p>
+                    <p><i class="bi bi-telephone text-primary me-2"></i>+7 895 293 55454</p>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="container-fluid text-light py-4" style="background: #051225;">
-        <div class="container">
-            <div class="row g-0">
-                <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-md-0">&copy; <a class="text-white border-bottom" href="#">Стоматология Азамат</a> 2010 - 2024 Россия, г. Новосибирск, Улица Бориса Богаткова, 248а / улица Кошурникова, 45/1 </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Footer End -->
-
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
+    <!-- Scripts -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-    <script src="lib/twentytwenty/jquery.event.move.js"></script>
-    <script src="lib/twentytwenty/jquery.twentytwenty.js"></script>
-
-    <!-- Template Javascript -->
     <script src="js/main.js"></script>
 </body>
-
 </html>
