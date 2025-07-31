@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="utf-8">
@@ -13,7 +13,7 @@
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
     <!-- Icon Font Stylesheet -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -33,7 +33,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-
     <style>
         /* Fullscreen Video Background */
         .video-background {
@@ -43,9 +42,8 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            z-index: -1; /* Place behind other elements */
-            opacity: 40%;
-            
+            z-index: -1;
+            opacity: 0.4;
         }
 
         /* Overlay for text readability */
@@ -56,36 +54,43 @@
             text-shadow: 1px 1px 3px black;
             padding: 100px;
         }
+
+        /* Service images */
+        .service-item img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+        }
     </style>
+
     <!-- Video Background -->
-    <video class="video-background" autoplay muted loop slow data-wow-delay="10s">
-        <source src="img/5356209-uhd_2160_3840_25fps.mp4" class="img-fluid" type="video/mp4">
-        Your browser does not support the video tag.
+    <video class="video-background" autoplay muted loop>
+        <source src="img/5356209-uhd_2160_3840_25fps.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео тег.
     </video>
 </head>
 
 <body>
     <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-40 start-50 d-flex align-items-center justify-content-center">
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary m-1" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="visually-hidden">Loading...</span>
         </div>
         <div class="spinner-grow text-dark m-1" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="visually-hidden">Loading...</span>
         </div>
         <div class="spinner-grow text-secondary m-1" role="status">
-            <span class="sr-only">Loading...</span>
+            <span class="visually-hidden">Loading...</span>
         </div>
     </div>
     <!-- Spinner End -->
-
 
     <!-- Topbar Start -->
     <div class="container-fluid bg-light ps-5 pe-0 d-none d-lg-block">
         <div class="row gx-0">
             <div class="col-md-6 text-center text-lg-start mb-2 mb-lg-0">
                 <div class="d-inline-flex align-items-center">
-                    <medium class="py-2"><i class="far fa-clock text-primary me-2"></i>Работаем Пн-Вс 09:00—21:00 без выходных</medium>
+                    <small class="py-2"><i class="far fa-clock text-primary me-2"></i>Работаем Пн-Вс 09:00—21:00 без выходных</small>
                 </div>
             </div>
             <div class="col-md-6 text-center text-lg-end">
@@ -102,30 +107,24 @@
     </div>
     <!-- Topbar End -->
 
-
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
         <a href="index.html" class="navbar-brand p-0 d-flex align-items-center">
-            <!-- Logo Image -->
             <img src="img/label2.jpg" alt="Logo" class="img-fluid me-3" style="height: 75px;">
-            <!-- Text Name -->
             <h1 class="m-0 text-primary text-dark p-2.5">Стоматология Азамат</h1>
         </a>
-        <!-- Removed navbar-toggler to prevent collapse on mobile -->
         <div class="navbar-nav ms-auto py-0">
             <a href="index.html" class="nav-item nav-link">Главное</a>
             <a href="about.html" class="nav-item nav-link">О клинике</a>
             <a href="service.html" class="nav-item nav-link active">Услуги</a>
             <a href="contact.html" class="nav-item nav-link">Контакты</a>
         </div>
-        <!-- WhatsApp Link -->
         <a href="https://wa.me/789529355454" target="_blank" class="ms-3 d-flex align-items-center text-decoration-none">
             <i class="fab fa-whatsapp fs-3" style="color: #25D366;"></i>
         </a>
         <a href="appointment.html" class="btn btn-primary py-2 px-4 ms-3">ЗАПИСАТЬСЯ НА ПРИЁМ</a>
     </nav>
     <!-- Navbar End -->
-
 
     <!-- Full Screen Search Start -->
     <div class="modal fade" id="searchModal" tabindex="-1">
@@ -145,166 +144,161 @@
     </div>
     <!-- Full Screen Search End -->
 
-
     <!-- Hero Start -->
     <div class="container-fluid bg-primary py-5 hero-header mb-5">
         <div class="row py-3">
-            <div class="col-12 col-sm-12 text-center">
-                <img class="img-fluid" class="img-fluid" src="img/4489255-uhd_3840_2160_25fps.mp4" alt="">
+            <div class="col-12 text-center">
+                <!-- Fixed wrong video src to image or better remove? Using a placeholder image instead -->
+                <img class="img-fluid" src="img/hero-services.jpg" alt="Услуги">
                 <h1 class="display-3 text-white animated zoomIn">УСЛУГИ</h1>
             </div>
         </div>
     </div>
     <!-- Hero End -->
 
-
     <!-- Service Start -->
-    <div class="container-fixed py-5 wow fadeInUp" data-wow-delay="0.1s">
-        <style>
-            .service-item img {
-                width: 100%; /* Ensures the image spans the full width of its container */
-                height: 250px; /* Set a fixed height for all images */
-                object-fit: cover; /* Ensures the image maintains its aspect ratio and fills the container */
-            }
-            
-        </style>
-        
+    <div class="container py-5 wow fadeInUp" data-wow-delay="0.1s">
         <div class="container-fluid">
-            <div class="col-lg-12 col-sm-12">
-                <div class="row g-5">
-                    <div class="col-md-4 service-item wowvzoomIi" data-wow-delay="0.6s">
-                        <div class="rounded-top overflow-hidden">
-                            <img class="img-fluid" src="img/pexels-fr3nks-305568.jpg" style="height: 320px;" alt="">
-                        </div>
-                        <div class="position-relative rounded-bottom text-center text-dark p-4" style="background-color: rgba(68, 153, 232, 0.058)">
-                            <h5 class="m-0">ЛЕЧЕНИЕ ЗУБОВ</h5>
-                            <p>Лечение в терапевтической стоматологии направлено на сохранение здоровья зубов и предотвращение их разрушения. Перед планированием терапии врач выслушает жалобы пациента, проведет осмотр, назначит необходимые диагностические процедуры. К лечению наши врачи приступают только после того, как выявят причину возникновения патологического состояния и поставят точный диагноз. Такой подход позволяет спасти зубы от удаления и исключить риск развития осложнений кариеса, пульпита, периодонтита, различных стоматитов и других заболеваний полости рта. Кариес — это системная патология твердых тканей зубов, которая вызывает их разрушение. 
-                            </p>
-                        </div>
-                        <br>
+            <div class="row g-5">
+                <div class="col-md-4 service-item wow zoomIn" data-wow-delay="0.6s">
+                    <div class="rounded-top overflow-hidden">
+                        <img class="img-fluid" src="img/pexels-fr3nks-305568.jpg" alt="Лечение зубов">
                     </div>
-                    <div class="col-md-4 service-item wow zoomIn" data-wow-delay="0.6s">
-                        <div class="rounded-top overflow-hidden">
-                            <img class="img-fluid" src="img/pexels-cedric-fauntleroy-4269686.jpg" style="height: 320px;" alt="">
-                        </div>
-                        <div class="position-relative rounded-bottom text-center text-dark p-4" style="background-color: rgba(68, 153, 232, 0.058)">
-                            <h5 class="m-0">КОНСУЛЬТАЦИЯ СТОМАТОЛОГА</h5>
-                            <p>Наша бесплатная консультация включает тщательный осмотр полости рта. Врач выявит имеющиеся проблемы и составит индивидуальный план лечения, оценит состояние зубов, десен и челюстей пациента, проконсультирует, какие процедуры необходимы, назовет сроки и стоимость лечения. Важно не откладывать визит к врачу, записываться сразу после первых признаков недомогания. Чем раньше будут выявлены и пролечены выявленные патологии, тем ниже будет риск их прогрессирования до серьезных заболеваний, снизится потребность в дорогостоящих процедурах.
-                            </p>
-                        </div>
-                    </div>    
-                    <div class="col-md-4 service-item wow zoomIn" data-wow-delay="0.6s">
-                        <div class="rounded-top overflow-hidden">
-                            <img class="img-fluid" src="img/Partial-Dentures.jpg" style="height: 320px;" alt="">
-                        </div>
-                        <div class="position-relative rounded-bottom text-center text-dark p-4" style="background-color: rgba(68, 153, 232, 0.058)">
-                            <h5 class="m-0">ПРОТЕЗИРОВАНИЕ ЗУБОВ</h5>
-                            <p>Протезирование зубов — услуга, направленная на восстановление целостности зубного ряда путем замены утраченных или сильно поврежденных зубов искусственными протезами. Современные протезы изготавливают по индивидуальным слепкам и практически не отличаются от настоящих зубов по эстетическим и функциональным свойствам. Это позволяет пациентам употреблять любую пищу, независимо от её твёрдости. Наши стоматологи помогут подобрать наилучший вариант для каждого конкретного случая.
-                            </p>
-                        </div>
+                    <div class="position-relative rounded-bottom text-center text-dark p-4" style="background-color: rgba(68, 153, 232, 0.058)">
+                        <h5 class="m-0">ЛЕЧЕНИЕ ЗУБОВ</h5>
+                        <p>Лечение в терапевтической стоматологии направлено на сохранение здоровья зубов и предотвращение их разрушения. Перед планированием терапии врач выслушает жалобы пациента, проведет осмотр, назначит необходимые диагностические процедуры. К лечению наши врачи приступают только после того, как выявят причину возникновения патологического состояния и поставят точный диагноз. Такой подход позволяет спасти зубы от удаления и исключить риск развития осложнений кариеса, пульпита, периодонтита, различных стоматитов и других заболеваний полости рта. Кариес — это системная патология твердых тканей зубов, которая вызывает их разрушение.</p>
                     </div>
                 </div>
-                <div class="row g-5">
-                    <div class="col-md-4 service-item wow zoomIn" data-wow-delay="0.6s">
-                        <div class="rounded-top overflow-hidden">
-                            <img class="img-fluid" src="img/pexels-cottonbro-6502305.jpg" style="height: 320px;" alt="">
-                        </div>
-                        <div class="position-relative rounded-bottom text-center text-dark p-4" style="background-color: rgba(68, 153, 232, 0.058)">
-                            <h5 class="m-0">ИМПЛАНТАЦИЯ ЗУБОВ</h5>
-                            <p>Зубной имплант – это титановая конструкция, которую вживляют в челюсть. Он срастается с костью и берет на себя функции отсутствующего зубного корня. В большинстве случаев выглядит как штифт с резьбой. На нем закрепляют соединяющий элемент, затем микропротез, заменяющий коронковую часть зуба. Рекоммендуется при отсутствующого зуба или ряда зубов, больших включенных дефектов зубного ряда, когда сложно изготовить обычный мостовидный протез и требуется дополнительная опора.
-                            </p>
-                        </div>
+                <div class="col-md-4 service-item wow zoomIn" data-wow-delay="0.6s">
+                    <div class="rounded-top overflow-hidden">
+                        <img class="img-fluid" src="img/pexels-cedric-fauntleroy-4269686.jpg" alt="Консультация стоматолога">
                     </div>
-                    <div class="col-md-4 service-item wow zoomIn" data-wow-delay="0.6s">
-                        <div class="rounded-top overflow-hidden">
-                            <img class="img-fluid" src="img/PFM-Crowns copy.jpg" style="height: 320px;" alt="">
-                        </div>
-                        <div class="position-relative rounded-bottom text-center text-dark p-4" style="background-color: rgba(68, 153, 232, 0.058)">
-                            <h5 class="m-0">УСТАНОВКА КОРОНОК</h5>
-                            <p>Зубная коронка — одиночный протез, который изготавливается по индивидуальному слепку и повторяет анатомическую форму видимой части зуба. Используют ee когда зуб разрушен больше чем на 50% или имеет сильный дефект. Это позволяет: восстановить красоту улыбки и правильный прикус; вернуть зубу жевательную функцию; предотвратить его дальнейшее разрушение. при сильном разрушении зуба нужно провести дополнительное эндодонтическое лечение, установить штифт или вкладку.
-                        </div>
-                    </div>
-                    <div class="col-md-4 service-item wow zoomIn" data-wow-delay="0.6s">
-                        <div class="rounded-top overflow-hidden">
-                            <img class="img-fluid" src="img/pexels-cottonbro-6502309.jpg" style="height: 320px;" alt="">
-                        </div>
-                        <div class="position-relative rounded-bottom text-center text-dark p-4" style="background-color: rgba(68, 153, 232, 0.058)">
-                            <h5 class="m-0">ОРТОДОНТИЯ</h5>
-                            <p>Ортодонтия – направление позволяющее исправлять проблемы зубного ряда, неправильный прикус и другие аномалии положения зубов. Наша задача состоит в выявллении проблемы, связанные с зубным рядом, мешающие жевательной или речевой функциям и не соответствующие эстетическому виду и исправлении челюстных патологий. Мы достигаем это с помощью специальных систем – кап и брекетов, которые устанавливаются на зубы. Перед установкой такой системы наши специалисты учитывает все особенности зубного ряда пациента, после чего выбирают, какие именно брекеты подойдут именно ему: керамические, металлические, лингвальные, полиуретановые и другие.
-                            </p>
-                        </div>
+                    <div class="position-relative rounded-bottom text-center text-dark p-4" style="background-color: rgba(68, 153, 232, 0.058)">
+                        <h5 class="m-0">КОНСУЛЬТАЦИЯ СТОМАТОЛОГА</h5>
+                        <p>Наша бесплатная консультация включает тщательный осмотр полости рта. Врач выявит имеющиеся проблемы и составит индивидуальный план лечения, оценит состояние зубов, десен и челюстей пациента, проконсультирует, какие процедуры необходимы, назовет сроки и стоимость лечения. Важно не откладывать визит к врачу, записываться сразу после первых признаков недомогания. Чем раньше будут выявлены и пролечены выявленные патологии, тем ниже будет риск их прогрессирования до серьезных заболеваний, снизится потребность в дорогостоящих процедурах.</p>
                     </div>
                 </div>
-                <br>
-                <div class="row g-5">
-                    <div class="col-md-4 service-item wow zoomIn" data-wow-delay="0.6s">
-                        <div class="rounded-top overflow-hidden">
-                            <img class="img-fluid" src="img/cleaning.jpg" alt="">
-                        </div>
-                        <div class="position-relative rounded-bottom text-center text-dark p-4" style="background-color: rgba(83, 159, 229, 0.094)">
-                            <h5 class="m-0">ГИГИЕНА ПОЛОСТИ РТА</h5>
-                            <p>Стоматологи рекомендуют проводить гигиеническую аппаратную чистку раз в полгода независимо от возраста. Скопление налета ведет к развитию большинства стоматологических проблемПрофессиональный уход необходим для профилактики заболеваний и эстетического преображения зубов без отбеливания. Процедура проходит безболезненно, не вредит эмали и имеет минимум противопоказаний. В процессе чистки зубов используются два устройства: ультразвуковой скалер и система AirFlow. Скалер — это источник ультразвуковых волн, который позволяет удалить налет бесконтактным способом в недоступных местах. AirFlow — это система, которая подает под давлением на поверхность зубов смесь воздуха, воды и двууглекислого натрия. Эта технология, в отличие от скалера, может использоваться только для механической чистки зубов.
-                            </p>
-                        </div>
+                <div class="col-md-4 service-item wow zoomIn" data-wow-delay="0.6s">
+                    <div class="rounded-top overflow-hidden">
+                        <img class="img-fluid" src="img/Partial-Dentures.jpg" alt="Протезирование зубов">
                     </div>
-                    <div class="col-md-4 service-item wow zoomIn" data-wow-delay="0.6s">
-                        <div class="rounded-top overflow-hidden">
-                            <img class="img-fluid" src="img/pexels-cottonbro-6502547.jpg" style="height: 320px;" alt="">
-                        </div>
-                        <div class="position-relative rounded-bottom text-center text-dark p-4" style="background-color: rgba(83, 159, 229, 0.094)">
-                            <h5 class="m-0">ЛЕЧЕНИЕ ДЕСЕН</h5>
-                            <p>Лечение десен или пародонтологией направлено на устранение заболеваний слизистой оболочки полости рта. Лечение десен начинается с устранения причин дискомфорта, которое часто сопровождается болью, кровоточивостью, появлением неприятного запаха или выделений. Воспаление тканей, окружающих зуб, первый сигнал появления заболеваний, игнорировать который нельзя. При прогрессировании оно может перейти в хроническую стадию, привести к расшатыванию зубов. Основной задачей наших врачей является предотвращение распространения воспаления и развития дистрофии соединительной ткани, снятие боли. При более запущенных стадиях — сохранение зубного ряда, поднятие уровня десны до естественного уровня, препятствующего выпадению зубов, удаление нагноения и налета, являющегося очагом инфекции.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 service-item wow zoomIn" data-wow-delay="0.6s">
-                        <div class="rounded-top overflow-hidden">
-                            <img class="img-fluid" src="img/pexels-nadezhda-moryak-7800657.jpg" style="height: 320px;" alt="">
-                        </div>
-                        <div class="position-relative rounded-bottom text-center text-dark p-4" style="background-color: rgba(83, 159, 229, 0.094)">
-                            <h5 class="m-0">ДЕТСКАЯ СТОМАТОЛОГИЯ</h5>
-                            <p>Молочные зубы у детей имеют более тонкую эмаль, которая сильнее подвержена повреждениям, травмам, что способствует быстрому развитию кариеса. Поэтому крайне важно контролировать состояние ротовой полости ребенка, регулярно проводить профилактические осмотры у стоматолога, не дожидаясь смены молочных зубов на постоянные.
-                                Своевременное посещение доктора поможет вовремя обнаружить заболевания, исправить неправильный прикус у ребенка, что позволит избежать дополнительных расходов и сложностей в будущем.</p>
-                        </div>
+                    <div class="position-relative rounded-bottom text-center text-dark p-4" style="background-color: rgba(68, 153, 232, 0.058)">
+                        <h5 class="m-0">ПРОТЕЗИРОВАНИЕ ЗУБОВ</h5>
+                        <p>Протезирование зубов — услуга, направленная на восстановление целостности зубного ряда путем замены утраченных или сильно поврежденных зубов искусственными протезами. Современные протезы изготавливают по индивидуальным слепкам и практически не отличаются от настоящих зубов по эстетическим и функциональным свойствам. Это позволяет пациентам употреблять любую пищу, независимо от её твёрдости. Наши стоматологи помогут подобрать наилучший вариант для каждого конкретного случая.</p>
                     </div>
                 </div>
-                <div class="row g-5">
-                    <div class="col-md-4 service-item wow" data-wow-delay="0.6s">
-                        <div class="rounded-top overflow-hidden">
-                            <img class="img-fluid" src="img/pexels-karolina-grabowska-6627566.jpg" style="height: 320px;">
-                        </div>
-                        <div class="position-relative rounded-bottom text-center text-dark p-4" style="background-color: rgba(83, 159, 229, 0.094)">
-                            <h5 class="m-0">УДАЛЕНИЕ ЗУБОВ</h5>
-                            <p> В любой ситуации мы делаем всё возможное для сохранения зуба. Но если удаления не избежать, наши врачи проводят его без боли и без осложнений. Показания к удалению могут быть xpонические инфекции, которые сопровождаются воспалительными процессами; разрушение зуба вследствие запущенного кариеса; заболевания пародонта (окружающих зуб тканей), из-за которых развилась сильная подвижность зуба; неправильное положение, мешающее соседним зубам; травмы. Когда удаление требует дополнительных этапов, его называют сложным. Причиной может быть затруднённый доступ из-за сильного разрушения коронки, неполного прорезывания, отёка, киста зуба. При сложных удалениях подход индивидуальный. 
-                            </p>
-                        </div>
-                        <br></br>
+            </div>
+
+            <div class="row g-5 mt-4">
+                <div class="col-md-4 service-item wow zoomIn" data-wow-delay="0.6s">
+                    <div class="rounded-top overflow-hidden">
+                        <img class="img-fluid" src="img/pexels-cottonbro-6502305.jpg" alt="Имплантация зубов">
+                    </div>
+                    <div class="position-relative rounded-bottom text-center text-dark p-4" style="background-color: rgba(68, 153, 232, 0.058)">
+                        <h5 class="m-0">ИМПЛАНТАЦИЯ ЗУБОВ</h5>
+                        <p>Зубной имплант – это титановая конструкция, которую вживляют в челюсть. Он срастается с костью и берет на себя функции отсутствующего зубного корня. В большинстве случаев выглядит как штифт с резьбой. На нем закрепляют соединяющий элемент, затем микропротез, заменяющий коронковую часть зуба. Рекоммендуется при отсутствии зуба или ряда зубов, больших дефектах зубного ряда, когда сложно изготовить обычный мостовидный протез и требуется дополнительная опора.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 service-item wow zoomIn" data-wow-delay="0.6s">
+                    <div class="rounded-top overflow-hidden">
+                        <img class="img-fluid" src="img/PFM-Crowns copy.jpg" alt="Установка коронок">
+                    </div>
+                    <div class="position-relative rounded-bottom text-center text-dark p-4" style="background-color: rgba(68, 153, 232, 0.058)">
+                        <h5 class="m-0">УСТАНОВКА КОРОНОК</h5>
+                        <p>Зубная коронка — одиночный протез, который изготавливается по индивидуальному слепку и повторяет анатомическую форму видимой части зуба. Используют ее, когда зуб разрушен больше чем на 50% или имеет сильный дефект. Это позволяет восстановить красоту улыбки и правильный прикус, вернуть зубу жевательную функцию и предотвратить его дальнейшее разрушение. При сильном разрушении зуба нужно провести дополнительное эндодонтическое лечение, установить штифт или вкладку.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 service-item wow zoomIn" data-wow-delay="0.6s">
+                    <div class="rounded-top overflow-hidden">
+                        <img class="img-fluid" src="img/pexels-cottonbro-6502309.jpg" alt="Ортодонтия">
+                    </div>
+                    <div class="position-relative rounded-bottom text-center text-dark p-4" style="background-color: rgba(68, 153, 232, 0.058)">
+                        <h5 class="m-0">ОРТОДОНТИЯ</h5>
+                        <p>Ортодонтия – направление, позволяющее исправлять проблемы зубного ряда, неправильный прикус и другие аномалии положения зубов. Мы выявляем проблемы, мешающие жевательной или речевой функции, а также нарушающие эстетику, и исправляем челюстные патологии с помощью кап и брекетов различных видов (керамические, металлические, лингвальные, полиуретановые и другие).</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-5 mt-4">
+                <div class="col-md-4 service-item wow zoomIn" data-wow-delay="0.6s">
+                    <div class="rounded-top overflow-hidden">
+                        <img class="img-fluid" src="img/cleaning.jpg" alt="Гигиена полости рта">
+                    </div>
+                    <div class="position-relative rounded-bottom text-center text-dark p-4" style="background-color: rgba(83, 159, 229, 0.094)">
+                        <h5 class="m-0">ГИГИЕНА ПОЛОСТИ РТА</h5>
+                        <p>Рекомендуется проводить гигиеническую аппаратную чистку раз в полгода независимо от возраста. Профессиональный уход необходим для профилактики заболеваний и эстетического преображения зубов без отбеливания. Используются ультразвуковой скалер и система AirFlow, которые эффективно удаляют налет и очищают труднодоступные места.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 service-item wow zoomIn" data-wow-delay="0.6s">
+                    <div class="rounded-top overflow-hidden">
+                        <img class="img-fluid" src="img/pexels-cottonbro-6502547.jpg" alt="Лечение десен">
+                    </div>
+                    <div class="position-relative rounded-bottom text-center text-dark p-4" style="background-color: rgba(83, 159, 229, 0.094)">
+                        <h5 class="m-0">ЛЕЧЕНИЕ ДЕСЕН</h5>
+                        <p>Лечение десен направлено на устранение заболеваний слизистой оболочки полости рта. Наши врачи снимают воспаление, боль, кровоточивость, предотвращают распространение инфекции и помогают сохранить зубной ряд.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 service-item wow zoomIn" data-wow-delay="0.6s">
+                    <div class="rounded-top overflow-hidden">
+                        <img class="img-fluid" src="img/pexels-nadezhda-moryak-7800657.jpg" alt="Детская стоматология">
+                    </div>
+                    <div class="position-relative rounded-bottom text-center text-dark p-4" style="background-color: rgba(83, 159, 229, 0.094)">
+                        <h5 class="m-0">ДЕТСКАЯ СТОМАТОЛОГИЯ</h5>
+                        <p>Молочные зубы у детей имеют тонкую эмаль, подверженную кариесу. Важно регулярно контролировать состояние полости рта ребенка и посещать стоматолога для профилактики и своевременного лечения.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row g-5 mt-4">
+                <div class="col-md-4 service-item wow zoomIn" data-wow-delay="0.6s">
+                    <div class="rounded-top overflow-hidden">
+                        <img class="img-fluid" src="img/pexels-karolina-grabowska-4199111.jpg" alt="Отбеливание зубов">
+                    </div>
+                    <div class="position-relative rounded-bottom text-center text-dark p-4" style="background-color: rgba(68, 153, 232, 0.058)">
+                        <h5 class="m-0">ОТБЕЛИВАНИЕ ЗУБОВ</h5>
+                        <p>Эстетическая процедура, направленная на улучшение цвета зубов с помощью специальных химических средств. В нашей клинике используются щадящие и эффективные методы отбеливания, безопасные для эмали.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 service-item wow zoomIn" data-wow-delay="0.6s">
+                    <div class="rounded-top overflow-hidden">
+                        <img class="img-fluid" src="img/pexels-max-rahubovskiy-7206941.jpg" alt="Удаление зубов">
+                    </div>
+                    <div class="position-relative rounded-bottom text-center text-dark p-4" style="background-color: rgba(68, 153, 232, 0.058)">
+                        <h5 class="m-0">УДАЛЕНИЕ ЗУБОВ</h5>
+                        <p>Процедура удаления зуба применяется в случае необратимых повреждений, сильных воспалений или перед протезированием. В нашей клинике удаление проводится с минимальной травматичностью и под местной анестезией.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 service-item wow zoomIn" data-wow-delay="0.6s">
+                    <div class="rounded-top overflow-hidden">
+                        <img class="img-fluid" src="img/pexels-rfstudio-3810786.jpg" alt="Лечение корневых каналов">
+                    </div>
+                    <div class="position-relative rounded-bottom text-center text-dark p-4" style="background-color: rgba(68, 153, 232, 0.058)">
+                        <h5 class="m-0">ЛЕЧЕНИЕ КОРНЕВЫХ КАНАЛОВ</h5>
+                        <p>Эндодонтическое лечение направлено на удаление воспаленных тканей внутри зуба и герметичное заполнение корневых каналов. Это помогает сохранить зуб и избежать его удаления.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <!-- Service End -->
-    
 
     <!-- Footer Start -->
-    <div class="container-fluid text-light py-5 wow fadeInUp" data-wow-delay="0.3s" style="background-color: rgba(0, 0, 0, 0.2); margin-top: 50px;">>
+    <div class="container-fluid text-light py-5 wow fadeInUp" data-wow-delay="0.3s" style="background-color: rgba(0, 0, 0, 0.2); margin-top: 50px;">
         <div class="container pt-5">
             <div class="row g-5 pt-4">
+
                 <div class="col-lg-3 col-md-6">
-                    <!-- <h3 class="text-white mb-4">Перейти</h3> -->
-                    <br>
-                    <br>
-                    <div class="d-flex flex-column justify-content-start">
-                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Главное</a>
-                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>О клинике</a>
-                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Услуги</a>
-                        <a class="text-light mb-2" href="#"><i class="bi bi-arrow-right text-primary me-2"></i>Контакты</a>
+                    <h5 class="text-white mb-4">Перейти</h5>
+                    <div class="d-flex flex-column">
+                        <a class="text-light mb-2" href="index.html"><i class="bi bi-arrow-right text-primary me-2"></i>Главное</a>
+                        <a class="text-light mb-2" href="about.html"><i class="bi bi-arrow-right text-primary me-2"></i>О клинике</a>
+                        <a class="text-light mb-2" href="service.html"><i class="bi bi-arrow-right text-primary me-2"></i>Услуги</a>
+                        <a class="text-light mb-2" href="contact.html"><i class="bi bi-arrow-right text-primary me-2"></i>Контакты</a>
                     </div>
                 </div>
-        
+
                 <div class="col-lg-6">
-                    <h3 class="text-white text-center mb-2">Наши клиники</h3>
+                    <h3 class="text-white text-center mb-4">Наши клиники</h3>
                     <div class="row">
                         <div class="col-md-6 mb-4">
                             <h5 class="text-white">Стоматология Азамат</h5>
@@ -320,17 +314,16 @@
                         </div>
                     </div>
                 </div>
-                
-                
+
                 <div class="col-lg-3 col-md-6">
                     <h3 class="text-white mb-4">Мы в социальных сетях</h3>
                     <div class="d-flex">
-                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i class="fab fa-vk fw-normal"></i></a>
-                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i class="fab fa-facebook-f fw-normal"></i></a>
-                        <!-- <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="#"><i class="fab fa-linkedin-in fw-normal"></i></a> -->
-                        <a class="btn btn-lg btn-primary btn-lg-square rounded" href="#"><i class="fab fa-instagram fw-normal"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="https://vk.com" target="_blank"><i class="fab fa-vk"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded me-2" href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-lg btn-primary btn-lg-square rounded" href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
+
             </div>
         </div>
     </div>
@@ -339,7 +332,7 @@
         <div class="container">
             <div class="row g-0">
                 <div class="col-md-6 text-center text-md-start">
-                    <p class="mb-md-0">&copy; <a class="text-white border-bottom" href="#">Стоматология Азамат</a> 2010 - 2024 Россия, г. Новосибирск, Улица Бориса Богаткова, 248а / улица Кошурникова, 45/1 </p>
+                    <p class="mb-md-0">&copy; <a class="text-white border-bottom" href="#">Стоматология Азамат</a> 2010 - 2024 Россия, г. Новосибирск, Улица Бориса Богаткова, 248а / улица Кошурникова, 45/1</p>
                 </div>
             </div>
         </div>
@@ -348,7 +341,6 @@
 
     <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
-
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

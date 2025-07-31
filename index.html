@@ -1,38 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="utf-8">
     <title>Стоматология Азамат</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
-    
+    <meta name="keywords" content="Стоматология, Азамат, Новосибирск">
+    <meta name="description" content="Стоматология Азамат — забота о ваших зубах с 2010 года">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon"type="image/x-icon">
+    <link rel="icon" type="image/x-icon" href="img/favicon.ico">
 
-    <!-- Google Web Fonts -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500;600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-    <!-- Icon Font Stylesheet -->
+    <!-- Icon Fonts -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
 
-    <!-- Libraries Stylesheet -->
+    <!-- Libraries Styles -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
     <link href="lib/animate/animate.min.css" rel="stylesheet">
-    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
-    <link href="lib/twentytwenty/twentytwenty.css" rel="stylesheet" />
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet">
+    <link href="lib/twentytwenty/twentytwenty.css" rel="stylesheet">
 
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS (One version only) -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-
-    <!-- Template Stylesheet -->
+    <!-- Custom Styles -->
     <link href="css/style.css" rel="stylesheet">
 
     <style>
@@ -44,12 +40,11 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            z-index: -1; /* Place behind other elements */
-            opacity: 40%;
-            
+            z-index: -1;
+            opacity: 0.4;
         }
 
-        /* Overlay for text readability */
+        /* Overlay Text */
         .content-overlay {
             position: relative;
             z-index: 2;
@@ -57,45 +52,55 @@
             text-shadow: 1px 1px 3px black;
             padding: 100px;
         }
+
+        /* Carousel Styling */
+        .carousel-item img,
+        .carousel-item video {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+        }
+
+        .service-text {
+            background-color: rgba(43, 178, 215, 0.129);
+            padding: 20px;
+        }
     </style>
-    <!-- Video Background -->
-    <video class="video-background" autoplay muted loop slow data-wow-delay="2">
-        <source src="img/5356209-uhd_2160_3840_25fps.mp4" class="img-fluid" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
 </head>
 
+
 <body>
-    <!-- Spinner Start -->
-    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
-        <div class="spinner-grow text-primary m-1" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-        <div class="spinner-grow text-dark m-1" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
-        <div class="spinner-grow text-secondary m-1" role="status">
-            <span class="sr-only">Loading...</span>
-        </div>
+    <!-- Video Background -->
+    <video class="video-background" autoplay muted loop>
+        <source src="img/5356209-uhd_2160_3840_25fps.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+    </video>
+    <div class="video-overlay"></div>
+
+    <!-- Spinner -->
+    <div id="spinner" class="show bg-white position-fixed w-100 vh-100 top-50 start-50 translate-middle d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary m-1"></div>
+        <div class="spinner-grow text-dark m-1"></div>
+        <div class="spinner-grow text-secondary m-1"></div>
     </div>
     <!-- Spinner End -->
 
 
-    <!-- Topbar Start -->
-    <div class="container-fluid bg-light ps-5 pe-0 d-none d-lg-block ">
+    <!-- Topbar -->
+    <div class="container-fluid bg-light ps-5 pe-0 d-none d-lg-block">
         <div class="row gx-0">
-            <div class="col-md-6 col-sm-12 text-center text-lg-start mb-2 mb-lg-0">
+            <div class="col-md-6 text-center text-lg-start mb-2">
                 <div class="d-inline-flex align-items-center">
-                    <medium class="py-2"><i class="far fa-clock text-primary me-2"></i>Работаем Пн-Вс 09:00—21:00 без выходных</medium>
+                    <span class="py-2"><i class="far fa-clock text-primary me-2"></i>Пн-Вс 09:00—21:00 без выходных</span>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-12 text-center text-lg-end">
-                <div class="position-relative d-inline-flex align-items-center bg-primary text-white top-shape px-5">
-                    <div class="me-3 pe-3 border-end py-2">
-                        <p class="m-0"><i class="fa fa-envelope-open me-2"></i>stomazamat@gmail.com</p>
+            <div class="col-md-6 text-center text-lg-end">
+                <div class="d-inline-flex align-items-center bg-primary text-white px-4">
+                    <div class="me-3 pe-3 border-end">
+                        <i class="fa fa-envelope-open me-2"></i>stomazamat@gmail.com
                     </div>
-                    <div class="py-2">
-                        <p class="m-0"><i class="fa fa-phone-alt me-2"></i>+789529355454</p>
+                    <div>
+                        <i class="fa fa-phone-alt me-2"></i>+789529355454
                     </div>
                 </div>
             </div>
@@ -104,28 +109,32 @@
     <!-- Topbar End -->
 
 
-    <<!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
-        <a href="index.html" class="navbar-brand p-0 d-flex align-items-center">
-            <!-- Logo Image -->
-            <img src="img/label2.jpg" alt="Logo" class="img-fluid me-3" style="height: 75px;">
-            <!-- Text Name -->
-            <h1 class="m-0 text-primary text-dark p-2.5">Стоматология Азамат</h1>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3">
+        <a href="index.html" class="navbar-brand d-flex align-items-center">
+        <img src="img/label2.jpg" alt="Logo" class="img-fluid me-3" style="height: 75px;">
+        <h1 class="m-0 text-dark">Стоматология Азамат</h1>
         </a>
-        <!-- Removed navbar-toggler to prevent collapse on mobile -->
-        <div class="navbar-nav ms-auto py-0">
+
+        <!-- Mobile toggle button -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto">
             <a href="index.html" class="nav-item nav-link active">Главное</a>
             <a href="about.html" class="nav-item nav-link">О клинике</a>
             <a href="service.html" class="nav-item nav-link">Услуги</a>
             <a href="contact.html" class="nav-item nav-link">Контакты</a>
         </div>
-        <!-- WhatsApp Link -->
-        <a href="https://wa.me/789529355454" target="_blank" class="ms-3 d-flex align-items-center text-decoration-none">
+        <a href="https://wa.me/789529355454" target="_blank" class="ms-3">
             <i class="fab fa-whatsapp fs-3" style="color: #25D366;"></i>
         </a>
-        <a href="appointment.html" class="btn btn-primary py-2 px-4 ms-3">ЗАПИСАТЬСЯ НА ПРИЁМ</a>
+        <a href="appointment.html" class="btn btn-primary ms-3">Записаться</a>
+        </div>
     </nav>
-    <!-- Navbar End -->
+        <!-- Navbar End -->
 
 
     <!-- Full Screen Search Start -->
@@ -170,17 +179,18 @@
                         <div class="row g-3">
                         <div class="col-sm-6 wow zoomIn" data-wow-delay="0.3s">
                             <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Стаж работы более 40 лет</h5>
-                            <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>С 2010 года, 14 лет заботимся о здоровьи ваших зубов </h5>
+                            <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>С 2010 года, 14 лет заботимся о здоровье ваших зубов </h5>
                             <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Больше 50 000 довольных пациентов</h5>
                         </div>
                         <div class="col-sm-6 wow zoomIn" data-wow-delay="0.6s">
                             <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Открыты с 9:00 до 21:00 без выходных</h5>
                             <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Международный опыт и стандард</h5>
-                            <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Гарантируем качественное лечения за справедливые цены</h5>
+                            <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Гарантируем качественное лечение за справедливые цены</h5>
                         </div>
                     </div>
                     <!-- Appointment Section Start -->
-                    <div class="container bg-primary bg-appointment my-5 wow fadeInUp" style="background: rgba(238, 131, 25, 0.557); data-wow-delay="0.1s" style="max-width: 600px; margin: 0 auto;">
+                    <div class="container bg-primary bg-appointment my-5 wow fadeInUp" style="background: rgba(238, 131, 25, 0.557);" data-wow-delay="0.1s">
+
                         <div class="appointment-form text-center p-4 wow zoomIn" data-wow-delay="0.6s">
                             <h2 class="text-white mb-4">Записаться на приём</h2>
                             <form action="https://formspree.io/f/xovqzogw" method="POST">
@@ -215,18 +225,19 @@
                             </form>
                             
                         </div>
-                        
+                            
                     </div>
-               <!-- Appointment Section End -->
+                <!-- Appointment Section End -->
                 </div>
-                  <!-- Image Content -->
+
+                    <!-- Image Content -->
                 <div class="col-lg-5 col-sm-12">
                     <div class="position-relative">
                         <!-- First Image -->
                         <div class="wow zoomIn" data-wow-delay="1.3s">
                             <img class="w-100 rounded" src="img/IMG_3756.JPG" style="object-fit: cover;" class="img-fluid" opacity: 80%;>
                         </div>
-                          <!-- Second Image -->
+                            <!-- Second Image -->
                         <div class="wow zoomIn" data-wow-delay="1.8s">
                             <img class="w-100 rounded" src="img/IMG_3755.JPG" style="object-fit: cover;" class="img-fluid" opacity: 80%;>
                         </div>
@@ -242,7 +253,7 @@
     <!-- About End -->
 
 
-    
+        
 
 
 
@@ -250,208 +261,113 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 
+
+
     <!-- Service Carousel Start -->
     <div id="serviceCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
-    <style data-wow-delay="0.5">
-    .carousel-item img {
-        width: 90%;
-        height: 230px;
-        object-fit: cover;
-    }
-    .carousel-item .service-text {
-        background-color: rgba(43, 178, 215, 0.129);
-        padding: 20px;
-    }
-    </style>
 
-    <!-- Carousel Indicators -->
-    <div class="carousel-indicators">
-    <button type="button" data-bs-target="#serviceCarousel" data-bs-slide-to="0" class="active"></button>
-    <button type="button" data-bs-target="#serviceCarousel" data-bs-slide-to="2" class="active"></button>
-    <button type="button" data-bs-target="#serviceCarousel" data-bs-slide-to="4" class="active"></button>
-    </div>
+        <!-- Carousel Indicators -->
+    <!-- Service Carousel Start -->
+    <div id="serviceCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
 
-  <!-- Carousel Content -->
-<div class="carousel-inner">
-    <!-- Item 1 -->
-    <div class="carousel-item active">
-      <div class="row">
-        <div class="col-md-4">
-            <!-- Video element with controls -->
-            <video
-              src="img/4489255-uhd_3840_2160_25fps.mp4" class="img-fluid"
-              type="video/mp4"
-              class="w-100"
-              autoplay
-              muted
-              loop
-            >
-              Your browser does not support the video tag.
-            </video>
-            <div class="service-text text-center">
-              <h5>ЛЕЧЕНИЕ ЗУБОВ</h5>
-            </div>
-          </div>
+        <!-- Carousel Indicators -->
+        <div class="carousel-indicators">
+        <button type="button" data-bs-target="#serviceCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#serviceCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#serviceCarousel" data-bs-slide-to="2"></button>
         </div>
 
-        <div class="col-md-4">
-            <!-- Video element with controls -->
-            <video
-            src="img/4489831-uhd_3840_2160_25fps.mp4"class="img-fluid"
-            type="video/mp4"
-            class="w-100"
-            autoplay
-            muted
-            loop
-            >
-            Your browser does not support the video tag.
-            </video>
-            <div class="service-text text-center">
-            <h5>КОНСУЛЬТАЦИЯ СТОМАТОЛОГА</h5>
-            </div>
-        </div>
+        <!-- Carousel Inner -->
+        <div class="carousel-inner">
 
-        <div class="col-md-4">
-            <!-- Video element with controls -->
-            <video
-            src="img/6630462-uhd_4096_2160_25fps.mp4"class="img-fluid"
-            type="video/mp4"
-            class="w-100"
-            autoplay
-            muted
-            loop
-            >
-            Your browser does not support the video tag.
-            </video>
-            <div class="service-text text-center">
-            <h5>ПРОТЕЗИРОВАНИЕ ЗУБОВ</h5>
-            </div>
-    
-        </div>
-    </div>
-
-    <!-- Item 2 -->
-    <div class="carousel-item">
-        <div class="row">
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+            <div class="row">
             <div class="col-md-4">
-
-                <!-- Video element with controls -->
-                <video
-                src="img/6502006-uhd_4096_2160_25fps.mp4"class="img-fluid"
-                type="video/mp4"
-                class="w-100"
-                autoplay
-                muted
-                loop
-                >
-                Your browser does not support the video tag.
-                </video>
+                <video src="img/4489255-uhd_3840_2160_25fps.mp4" autoplay muted loop></video>
                 <div class="service-text text-center">
-            <h5>ИМПЛАНТАЦИЯ ЗУБОВ</h5>
+                <h5>ЛЕЧЕНИЕ ЗУБОВ</h5>
+                </div>
             </div>
-
-        </div>
-        <div class="col-md-4">
-            <!-- Video element with controls -->
-            <video
-                src="img/6630295-uhd_4096_2160_25fps.mp4"class="img-fluid"
-                type="video/mp4"
-                class="w-100"
-                autoplay
-                muted
-                loop
-            >
-                Your browser does not support the video tag.
-            </video>
-            <div class="service-text text-center">
-                <h5>УСТАНОВКА КОРОНОК</h5>
-            </div>
-        </div>
-        <div class="col-md-4">
-              <!-- Video element with controls -->
-            <video
-            src="img/6967714-uhd_3840_2160_25fps.mp4"class="img-fluid"
-            type="video/mp4"
-            class="w-100"
-            autoplay
-            muted
-            loop
-            >
-            Your browser does not support the video tag.
-            </video>
-            <div class="service-text text-center">
-            <h5>ОРТОДОНТИЯ</h5>
-            </div>
-        </div>
-    </div>
-
-    <!-- Item 3 -->
-    <div class="carousel-item">
-        <div class="row">
             <div class="col-md-4">
-
-            <!-- Video element with controls -->
-            <video
-            src="img/6630299-uhd_4096_2160_25fps.mp4"class="img-fluid"
-            type="video/mp4"
-            class="w-100"
-            autoplay
-            muted
-            loop
-            >
-            Your browser does not support the video tag.
-            </video>
-            <div class="service-text text-center">
-            <h5>ГИГИЕНА ПОЛОСТИ РТА</h5>
+                <video src="img/4489831-uhd_3840_2160_25fps.mp4" autoplay muted loop></video>
+                <div class="service-text text-center">
+                <h5>КОНСУЛЬТАЦИЯ СТОМАТОЛОГА</h5>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <video src="img/6630462-uhd_4096_2160_25fps.mp4" autoplay muted loop></video>
+                <div class="service-text text-center">
+                <h5>ПРОТЕЗИРОВАНИЕ ЗУБОВ</h5>
+                </div>
+            </div>
             </div>
         </div>
-        <div class="col-md-4">
-            <!-- Video element with controls -->
-            <video
-            src="img/5099677-uhd_3840_2160_30fps.mp4"class="img-fluid"
-            type="video/mp4"
-            class="w-100"
-            autoplay
-            muted
-            loop
-            >
-            Your browser does not support the video tag.
-            </video>
-            <div class="service-text text-center">class="img-fluid"
-            <h5>ЛЕЧЕНИЕ ДЕСЕН</h5>
-        </div>
-       
-        <div class="col-md-4">
-            <!-- Video element with controls -->
-            <video
-            src="img/7803041-hd_1920_1078_30fps.mp4"class="img-fluid"
-            type="video/mp4"
-            class="w-100"
-            autoplay
-            muted
-            loop
-            >
-            Your browser does not support the video tag.
-            </video>
-            <div class="service-text text-center">
-            <h5>ДЕТСКАЯ СТОМАТОЛОГИЯ</h5>
-        </div>
-        
-        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+            <div class="row">
+            <div class="col-md-4">
+                <video src="img/6502006-uhd_4096_2160_25fps.mp4" autoplay muted loop></video>
+                <div class="service-text text-center">
+                <h5>ИМПЛАНТАЦИЯ ЗУБОВ</h5>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <video src="img/6630295-uhd_4096_2160_25fps.mp4" autoplay muted loop></video>
+                <div class="service-text text-center">
+                <h5>УСТАНОВКА КОРОНОК</h5>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <video src="img/6967714-uhd_3840_2160_25fps.mp4" autoplay muted loop></video>
+                <div class="service-text text-center">
+                <h5>ОРТОДОНТИЯ</h5>
+                </div>
+            </div>
+            </div>
         </div>
 
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+            <div class="row">
+            <div class="col-md-4">
+                <video src="img/6630299-uhd_4096_2160_25fps.mp4" autoplay muted loop></video>
+                <div class="service-text text-center">
+                <h5>ГИГИЕНА ПОЛОСТИ РТА</h5>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <video src="img/5099677-uhd_3840_2160_30fps.mp4" autoplay muted loop></video>
+                <div class="service-text text-center">
+                <h5>ЛЕЧЕНИЕ ДЕСЕН</h5>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <video src="img/7803041-hd_1920_1078_30fps.mp4" autoplay muted loop></video>
+                <div class="service-text text-center">
+                <h5>ДЕТСКАЯ СТОМАТОЛОГИЯ</h5>
+                </div>
+            </div>
+            </div>
+        </div>
 
-    </div>
+        </div>
 
-    <!-- Carousel Controls -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#serviceCarousel" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#serviceCarousel" data-bs-slide="next">
-    <span class="carousel-control-next-icon"></span>
-    </button>
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#serviceCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#serviceCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        </button>
+
     </div>
     <!-- Service Carousel End -->
+
+
+
+
 
 
     <!-- Contact Start -->
@@ -460,7 +376,7 @@
             <div class="row g-5">
                 <!-- Contact Information Column -->
                 <div class="col-xl-4 col-lg-4 wow slideInUp" data-wow-delay="0.1s">
-                    <div class="bg-light rbga(1,2,3,1) rounded h-100 p-5">
+                    <div class="bg-light rgba(1,2,3,1) rounded h-100 p-5">
                         <div class="d-flex align-items-center mb-2">
                             <i class="bi bi-geo-alt fs-1 text-primary me-3"></i>
                             <div class="text-start">
@@ -482,10 +398,10 @@
                                 <h4><span>+789529355454 (обновить)</span></h4>
                             </div>
                             <br>
-                             <!-- WhatsApp Link -->
+                                <!-- WhatsApp Link -->
                         <a href="https://wa.me/789529355454" target="_blank" class="ms-1 d-flex align-items-center text-decoration-none">
                         <i class="fab fa-whatsapp fs-3" style="color: #25D366;"></i>
-                         </a>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -512,7 +428,7 @@
         </div>
     </div>
     <!-- Contact End -->
-    
+        
 
     <!-- Footer Start -->
     <div class="container-fluid text-light py-5 wow fadeInUp" data-wow-delay="0.3s" style="background-color: rgba(0, 0, 0, 0.2); margin-top: 50px;">>
@@ -575,24 +491,32 @@
 
 
     <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top"><i class="bi bi-arrow-up"></i></a>
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded back-to-top">
+        <i class="bi bi-arrow-up"></i>
+    </a>
 
+        <!-- JS Libraries -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/wow/wow.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/tempusdominus/js/moment.min.js"></script>
+        <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+        <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        <script src="lib/twentytwenty/jquery.event.move.js"></script>
+        <script src="lib/twentytwenty/jquery.twentytwenty.js"></script>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/wow/wow.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-    <script src="lib/twentytwenty/jquery.event.move.js"></script>
-    <script src="lib/twentytwenty/jquery.twentytwenty.js"></script>
-
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+        <!-- Custom JS -->
+        <script src="js/main.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                document.getElementById('spinner').classList.remove('show');
+            });
+        </script>
 </body>
 
+
+    
 </html>
