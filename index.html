@@ -215,7 +215,7 @@
                             <div class="row g-3">
                                 <!-- Clinic Selection -->
                                 <div class="col-12 col-sm-12">
-                                    <select name="clinic" class="form-select bg-light border-0 text-center" style="height: 55px;" required>
+                                    <select name="clinic" required class="form-select bg-light border-0 text-center" style="height: 55px;" required>
                                         <option value="" selected disabled>Выбрать клинику</option>
                                         <option value="Азамат">Азамат</option>
                                         <option value="Ата-Бала">Ата-Бала</option>
@@ -224,12 +224,12 @@
                     
                                 <!-- Name Input -->
                                 <div class="col-12 col-sm-12">
-                                    <input type="text" name="name" class="form-control bg-light border-0 text-left" placeholder="Как вас зовут?" style="height: 55px;" required>
+                                    <input type="text" name="name" requiered class="form-control bg-light border-0 text-left" placeholder="Как вас зовут?" style="height: 55px;" required>
                                 </div>
                     
                                 <!-- Phone Input -->
                                 <div class="col-12 col-sm-12">
-                                    <input type="tel" name="phone" class="form-control bg-light border-0 text-left" placeholder="Ваш номер" style="height: 55px;" required>
+                                    <input type="tel" name="phone" required class="form-control bg-light border-0 text-left" placeholder="Ваш номер" style="height: 55px;" required>
                                 </div>
                     
                                 <!-- Hidden Input for Reply Email -->
@@ -574,7 +574,7 @@
 
         <!-- Your main JS -->
         <script src="js/main.js"></script>
-        
+
         <script>
             document.addEventListener("DOMContentLoaded", function() {
                 document.getElementById('spinner').classList.remove('show');

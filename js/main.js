@@ -135,3 +135,18 @@
     
 })(jQuery);
 
+
+fetch(form.action, {
+    method: "POST",
+    headers: {
+        "Accept": "application/json",
+        "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+        clinic: form.clinic.value,
+        name: form.name.value,
+        phone: form.phone.value,
+        message: form.message.value
+    })
+})
+
