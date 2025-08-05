@@ -65,6 +65,11 @@ hr {
   opacity: 0.25;
 }
 
+/* Clinic name style - consistent across all pages */
+.clinic-name {
+    color: #06A3DA; /* Same blue as index page */
+}
+
 hr:not([size]) {
   height: 1px;
 }
