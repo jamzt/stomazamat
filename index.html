@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 
 <head>
@@ -25,7 +25,7 @@
     <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet">
     <link href="lib/twentytwenty/twentytwenty.css" rel="stylesheet">
 
-    <!-- Bootstrap CSS (One version only) -->
+    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom Styles -->
@@ -60,6 +60,41 @@
             width: 100%;
             height: 230px;
             object-fit: cover;
+        }
+
+        /* Mobile sticky bar body padding */
+        @media (max-width: 991px) {
+            body { padding-bottom: 68px; }
+        }
+
+        /* Hero section text readability */
+        .hero-section {
+            text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+        }
+        .hero-section .col-lg-8 {
+            background: rgba(255,255,255,0.82);
+            backdrop-filter: blur(6px);
+            border-radius: 1.5rem;
+            padding: 3rem 2.5rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.10);
+        }
+        @media (max-width: 576px) {
+            .hero-section .col-lg-8 {
+                padding: 2rem 1.2rem;
+            }
+        }
+
+        /* Stats strip hover */
+        .stat-item {
+            transition: transform 0.2s;
+        }
+        .stat-item:hover {
+            transform: translateY(-4px);
+        }
+
+        /* Testimonial card */
+        .testimonial-item {
+            border-bottom: 3px solid #06A3DA;
         }
 
         .service-text {
@@ -105,8 +140,8 @@
                     </div>
                     <div>
                         <i class="fa fa-phone-alt me-2"></i>
-                        <a href="tel:+79837775454" class="text-white text-decoration-none">
-                            +7 983 777 5454
+                        <a href="tel:+79810000154" class="text-white text-decoration-none">
+                            +7 981 000 0154
                         </a>
                     </div>
                 </div>
@@ -136,13 +171,38 @@
             <a href="service.html" class="nav-item nav-link">Услуги</a>
             <a href="contact.html" class="nav-item nav-link">Контакты</a>
         </div>
-        <a href="https://wa.me/79837775454" target="_blank" class="ms-3">
+        <a href="https://wa.me/79810000154" target="_blank" class="ms-3">
             <i class="fab fa-whatsapp fs-3" style="color: #25D366;"></i>
         </a>
         <a href="appointment.html" class="btn btn-primary ms-3">Записаться</a>
         </div>
     </nav>
         <!-- Navbar End -->
+
+        <!-- ===== HERO SECTION ===== -->
+        <div class="hero-section d-flex align-items-center justify-content-center text-center" style="min-height: 92vh; position: relative; z-index: 1;">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-lg-8 col-md-10">
+                        <p class="text-primary fw-semibold text-uppercase mb-2" style="letter-spacing: 3px;">Стоматология в Новосибирске</p>
+                        <h1 class="display-3 fw-bold text-dark mb-3" style="line-height: 1.15;">Ваша <span style="color: #06A3DA;">здоровая улыбка</span> — наша забота и ответственность</h1>
+                        <p class="lead text-secondary mb-4">Семейная стоматология с 2010 года. Более 50&nbsp;000 довольных пациентов.<br>Работаем ежедневно с 9:00 до 21:00 без выходных.</p>
+                        <div class="d-flex flex-wrap gap-3 justify-content-center">
+                            <a href="appointment.html" class="btn btn-primary btn-lg px-5 py-3 shadow">Записаться онлайн</a>
+                            <a href="tel:+79810000154" class="btn btn-outline-primary btn-lg px-5 py-3">
+                                <i class="fa fa-phone-alt me-2"></i>Позвонить
+                            </a>
+                        </div>
+                        <div class="mt-4 d-flex flex-wrap gap-4 justify-content-center text-muted small">
+                            <span><i class="fa fa-check-circle text-primary me-1"></i>Бесплатная консультация</span>
+                            <span><i class="fa fa-check-circle text-primary me-1"></i>Без очередей</span>
+                            <span><i class="fa fa-check-circle text-primary me-1"></i>Гарантия на лечение</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hero End -->
 
 
     <!-- Full Screen Search Start -->
@@ -166,7 +226,7 @@
 
 
     <!-- About Start -->
-    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" style="background: rgba(255,255,255,0.88); backdrop-filter: blur(4px);">
         <div class="container">
             <div class="row g-5">
                 <div class="col-lg-7 col-sm-12">
@@ -175,14 +235,16 @@
                         <h1 class="display-5 mb-0">Забота о ваших зубах - призвание нашей Семьи</h1>
                     </div>
                     
-                    <p class="mb-4">Спасибо вам за годы доверия и преданности нашей клинике «Ата-Бала». Именно благодаря вам мы росли, развивались и продолжали совершенствоваться. Сегодня мы с радостью приглашаем вас в нашу новую клинику «Азамат» — чтобы быть ещё ближе, ещё доступнее и ещё удобнее для вас.
+                     <p class="mb-3">Наша клиника — это семейное дело, основанное моим отцом и братом. Отец посвятил стоматологии более 40 лет жизни — не ради карьеры, а потому что искренне любит помогать людям. Он из тех врачей, кто одинаково внимателен к каждому пациенту, независимо от возраста, достатка или ситуации. Именно эта черта — помогать без различий — стала фундаментом нашей клиники с первого дня.</p>
 
-                        С самого начала мы стремились объединить честный подход и современные технологии. Мы используем передовые методы диагностики и лечения, чтобы вы получали стоматологический уход мирового уровня по справедливым ценам.
-                        
-                        Мы гордимся тем, что у нас действует открытая и тёплая атмосфера. Здесь вы можете получить бесплатную консультацию как по самым популярным, так и по узким направлениям стоматологии. Мы делаем всё, чтобы ваши вопросы решались за одно посещение, освобождая ваше время для жизни, семьи и того, что действительно важно.
-                        
-                        Наша цель — не просто лечить зубы, а заботиться о вашей улыбке так, как о своей собственной.
-                    </p>
+                    <blockquote class="border-start border-4 border-primary ps-3 my-4">
+                        <p class="mb-1 fst-italic text-dark">"Тепло и честность — это не слова, это то, как мы работаем каждый день. Мы одинаково внимательны к каждому — независимо от возраста, достатка или ситуации."</p>
+                        <footer class="text-muted small">— Азамат</footer>
+                    </blockquote>
+
+                    <p class="mb-3">Брат продолжил это дело, привнеся современные технологии и международные стандарты, но сохранив главное — тепло и честность, которые отличают семейную клинику от безликой сети. Здесь вас знают по имени, слышат ваши опасения и никогда не назначают лишнего.</p>
+
+                    <p class="mb-4">Мы верим: <strong>качественная стоматология должна быть доступна каждому.</strong> Наша цель — не просто лечить зубы, а заботиться о вас так, как заботятся о близких.</p>
                         <div class="row g-3">
                         <div class="col-sm-6 wow zoomIn" data-wow-delay="0.3s">
                             <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Стаж работы более 40 лет</h5>
@@ -191,7 +253,7 @@
                         </div>
                         <div class="col-sm-6 wow zoomIn" data-wow-delay="0.6s">
                             <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Открыты с 9:00 до 21:00 без выходных</h5>
-                            <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Международный опыт и стандард</h5>
+                            <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Международный опыт и стандарт</h5>
                             <h5 class="mb-3"><i class="fa fa-check-circle text-primary me-3"></i>Гарантируем качественное лечение за справедливые цены</h5>
                         </div>
                     </div>
@@ -212,19 +274,12 @@
                         </div>
                     
                         <form id="appointmentForm" action="https://formspree.io/f/xovqzogw" method="POST">
+                            <input type="hidden" name="clinic" value="Азамат">
                             <div class="row g-3">
-                                <!-- Clinic Selection -->
-                                <div class="col-12 col-sm-12">
-                                    <select name="clinic" required class="form-select bg-light border-0 text-center" style="height: 55px;" required>
-                                        <option value="" selected disabled>Выбрать клинику</option>
-                                        <option value="Азамат">Азамат</option>
-                                        <option value="Ата-Бала">Ата-Бала</option>
-                                    </select>
-                                </div>
                     
                                 <!-- Name Input -->
                                 <div class="col-12 col-sm-12">
-                                    <input type="text" name="name" requiered class="form-control bg-light border-0 text-left" placeholder="Как вас зовут?" style="height: 55px;" required>
+                                    <input type="text" name="name" class="form-control bg-light border-0 text-left" placeholder="Как вас зовут?" style="height: 55px;" required>
                                 </div>
                     
                                 <!-- Phone Input -->
@@ -281,15 +336,15 @@
                     <div class="position-relative">
                         <!-- First Image -->
                         <div class="wow zoomIn" data-wow-delay="1.3s">
-                            <img class="w-100 rounded" src="img/IMG_3756.JPG" style="object-fit: cover;" class="img-fluid" opacity: 80%;>
+                            <img class="w-100 rounded img-fluid" src="img/IMG_3756.JPG" style="object-fit: cover; opacity: 0.8;">
                         </div>
                             <!-- Second Image -->
                         <div class="wow zoomIn" data-wow-delay="1.8s">
-                            <img class="w-100 rounded" src="img/IMG_3755.JPG" style="object-fit: cover;" class="img-fluid" opacity: 80%;>
+                            <img class="w-100 rounded img-fluid" src="img/IMG_3755.JPG" style="object-fit: cover; opacity: 0.8;">
                         </div>
                         <!-- Third Image -->
                         <div class="mb-4 wow zoomIn" data-wow-delay="0.6s">
-                            <img class="w-100 rounded" src="img/broaward.JPG" style="object-fit: cover;" class="img-fluid" opacity: 80%;>
+                            <img class="w-100 rounded img-fluid" src="img/broaward.JPG" style="object-fit: cover; opacity: 0.8;">
                         </div>
                     </div>
                 </div>
@@ -298,18 +353,162 @@
     </div>
     <!-- About End -->
 
+    <!-- ===== STATS COUNTER STRIP ===== -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" style="background: linear-gradient(135deg, #06A3DA 0%, #0481ae 100%);">
+        <div class="container">
+            <div class="row g-4 text-center text-white">
+                <div class="col-6 col-lg-3">
+                    <div class="stat-item">
+                        <div class="display-4 fw-bold counter" data-target="40">0</div>
+                        <div class="fs-6 mt-1 opacity-75">лет опыта врачей</div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="stat-item">
+                        <div class="display-4 fw-bold"><span class="counter" data-target="50">0</span>K+</div>
+                        <div class="fs-6 mt-1 opacity-75">довольных пациентов</div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="stat-item">
+                        <div class="display-4 fw-bold"><span class="counter" data-target="15">0</span></div>
+                        <div class="fs-6 mt-1 opacity-75">лет на рынке</div>
+                    </div>
+                </div>
+                <div class="col-6 col-lg-3">
+                    <div class="stat-item">
+                        <div class="display-4 fw-bold"><span class="counter" data-target="12">0</span></div>
+                        <div class="fs-6 mt-1 opacity-75">часов приёма в день</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Stats End -->
 
-        
+    <!-- ===== TESTIMONIALS ===== -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s">
+        <div class="container">
+            <div class="text-center mb-5">
+                <p class="text-primary fw-semibold text-uppercase" style="letter-spacing: 3px;">Отзывы</p>
+                <h2 class="display-5 fw-bold text-dark">Что говорят наши пациенты</h2>
+            </div>
+            <div class="testimonial-carousel owl-carousel">
 
+                <div class="testimonial-item bg-light rounded p-4 mx-2">
+                    <div class="d-flex text-warning mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="mb-3">"Замечательная клиника! Давно искала хорошего стоматолога — теперь хожу только сюда. Врач очень внимательный, всё объяснил и сделал без боли. Спасибо огромное!"</p>
+                    <div class="d-flex align-items-center">
+                        <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center me-3" style="width:48px;height:48px;flex-shrink:0;">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        <div>
+                            <div class="fw-bold text-dark">Анна М.</div>
+                            <small class="text-muted">Пациент клиники</small>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="testimonial-item bg-light rounded p-4 mx-2">
+                    <div class="d-flex text-warning mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="mb-3">"Поставили имплант — результат отличный. Цены честные, всё заранее объяснили. Очень доволен подходом и качеством работы. Рекомендую всем знакомым!"</p>
+                    <div class="d-flex align-items-center">
+                        <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center me-3" style="width:48px;height:48px;flex-shrink:0;">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        <div>
+                            <div class="fw-bold text-dark">Дмитрий К.</div>
+                            <small class="text-muted">Пациент клиники</small>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- Include Bootstrap CSS and JS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"/>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+                <div class="testimonial-item bg-light rounded p-4 mx-2">
+                    <div class="d-flex text-warning mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="mb-3">"Хожу всей семьёй уже несколько лет. Врачи профессиональные, атмосфера тёплая, никакого страха у детей нет. Бесплатная консультация — очень удобно!"</p>
+                    <div class="d-flex align-items-center">
+                        <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center me-3" style="width:48px;height:48px;flex-shrink:0;">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        <div>
+                            <div class="fw-bold text-dark">Светлана Т.</div>
+                            <small class="text-muted">Пациент клиники</small>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="testimonial-item bg-light rounded p-4 mx-2">
+                    <div class="d-flex text-warning mb-3">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="mb-3">"Лечила кариес и делала профгигиену. Всё прошло быстро и безболезненно. Очень нравится, что врач всегда на связи и отвечает на вопросы. Спасибо!"</p>
+                    <div class="d-flex align-items-center">
+                        <div class="rounded-circle bg-primary d-flex align-items-center justify-content-center me-3" style="width:48px;height:48px;flex-shrink:0;">
+                            <i class="fas fa-user text-white"></i>
+                        </div>
+                        <div>
+                            <div class="fw-bold text-dark">Марина В.</div>
+                            <small class="text-muted">Пациент клиники</small>
+                        </div>
+                    </div>
+                </div>
 
+            </div>
+        </div>
+    </div>
+    <!-- Testimonials End -->
 
-  
+    <!-- ===== PRICE LIST ===== -->
+    <div class="container-fluid py-5 wow fadeInUp" data-wow-delay="0.1s" style="background-color: #f8fdff;">
+        <div class="container">
+            <div class="text-center mb-5">
+                <p class="text-primary fw-semibold text-uppercase" style="letter-spacing: 3px;">Прозрачные цены</p>
+                <h2 class="display-5 fw-bold text-dark">Стоимость услуг</h2>
+                <p class="text-muted">Цены ниже среднерыночных по Новосибирску. Точную стоимость уточняйте на бесплатной консультации.</p>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="bg-white rounded shadow-sm overflow-hidden">
+                        <table class="table table-striped table-hover mb-0">
+                            <thead>
+                                <tr style="background-color: #06A3DA;">
+                                    <th class="text-white py-3 ps-4" style="width:60%;">Услуга</th>
+                                    <th class="text-white py-3 text-end pe-4">Примерная цена</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td class="ps-4 py-2">Консультация</td><td class="text-end pe-4 fw-semibold text-primary">Бесплатно — 400 ₽</td></tr>
+                                <tr><td class="ps-4 py-2">Лечение кариеса (1 зуб)</td><td class="text-end pe-4 fw-semibold text-primary">1 600 — 4 800 ₽</td></tr>
+                                <tr><td class="ps-4 py-2">Удаление зуба (простое)</td><td class="text-end pe-4 fw-semibold text-primary">1 200 — 3 200 ₽</td></tr>
+                                <tr><td class="ps-4 py-2">Удаление зуба (сложное)</td><td class="text-end pe-4 fw-semibold text-primary">3 200 — 8 000 ₽</td></tr>
+                                <tr><td class="ps-4 py-2">Профгигиена (чистка)</td><td class="text-end pe-4 fw-semibold text-primary">2 400 — 5 600 ₽</td></tr>
+                                <tr><td class="ps-4 py-2">Отбеливание</td><td class="text-end pe-4 fw-semibold text-primary">6 400 — 16 000 ₽</td></tr>
+                                <tr><td class="ps-4 py-2">Коронка (металлокерамика)</td><td class="text-end pe-4 fw-semibold text-primary">6 400 — 12 000 ₽</td></tr>
+                                <tr><td class="ps-4 py-2">Коронка (цирконий)</td><td class="text-end pe-4 fw-semibold text-primary">14 400 — 28 000 ₽</td></tr>
+                                <tr><td class="ps-4 py-2">Имплант (под ключ)</td><td class="text-end pe-4 fw-semibold text-primary">28 000 — 64 000 ₽</td></tr>
+                                <tr><td class="ps-4 py-2">Брекеты (металл)</td><td class="text-end pe-4 fw-semibold text-primary">40 000 — 72 000 ₽</td></tr>
+                                <tr><td class="ps-4 py-2">Брекеты (керамика)</td><td class="text-end pe-4 fw-semibold text-primary">64 000 — 104 000 ₽</td></tr>
+                                <tr><td class="ps-4 py-2">Виниры (1 зуб)</td><td class="text-end pe-4 fw-semibold text-primary">12 000 — 24 000 ₽</td></tr>
+                                <tr><td class="ps-4 py-2">Лечение каналов (1 канал)</td><td class="text-end pe-4 fw-semibold text-primary">2 400 — 5 600 ₽</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="text-center mt-4">
+                        <a href="appointment.html" class="btn btn-primary btn-lg px-5 me-2">Записаться онлайн</a>
+                        <a href="tel:+79810000154" class="btn btn-outline-primary btn-lg px-5"><i class="fa fa-phone-alt me-2"></i>Позвонить</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Price List End -->
+
     <!-- Service Carousel Start -->
     <div id="serviceCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
 
@@ -320,25 +519,8 @@
         <button type="button" data-bs-target="#serviceCarousel" data-bs-slide-to="1"></button>
         <button type="button" data-bs-target="#serviceCarousel" data-bs-slide-to="2"></button>
         </div>
-        <style>
-            .carousel-item video {
-              width: 100%;
-              height: 250px; /* or another fixed height you prefer */
-              object-fit: cover;
-              border-radius: 0.5rem;
-            }
-          </style>
-
         <!-- Carousel Inner -->
         <div class="carousel-inner">
-            <style>
-  .carousel-item video {
-    width: 100%;
-    height: 250px; /* or another fixed height you prefer */
-    object-fit: cover;
-    border-radius: 0.5rem;
-  }
-</style>
 
         <!-- Slide 1 -->
         <div class="carousel-item active">
@@ -455,35 +637,23 @@
                             <i class="bi bi-phone-vibrate fs-1 text-primary me-3"></i>
                             <div class="text-start">
                                 <h6 class="mb-0">Позвонить:</h6>
-                                <h4><span>+79837775454</span></h4>
+                                <h4><span>+7 981 000 0154</span></h4>
                             </div>
                             <br>
                                 <!-- WhatsApp Link -->
-                        <a href="https://wa.me/79837775454" target="_blank" class="ms-1 d-flex align-items-center text-decoration-none">
+                        <a href="https://wa.me/79810000154" target="_blank" class="ms-1 d-flex align-items-center text-decoration-none">
                         <i class="fab fa-whatsapp fs-3" style="color: #25D366;"></i>
                             </a>
                         </div>
                     </div>
                 </div>
 
-            <!-- First Map Column -->
-            
-            <div class="col-xl-4 col-lg-4 wow slideInUp" data-wow-delay="0.3s">
+            <!-- Map -->
+            <div class="col-xl-8 col-lg-8 wow slideInUp" data-wow-delay="0.3s">
                 <iframe class="position-relative rounded w-100 h-100"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2286.339962533259!2d82.97583307795378!3d55.03725897282769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dfef5afefff71f%3A0x5c3dd5da4d299e63!2sUlitsa%20Koshurnikova%2C%2045%2F1%2C%20Novosibirsk%2C%20Novosibirskaya%20oblast&#39;%2C%20630089!5e0!3m2!1sen!2sru!4v1733650932156!5m2!1sen!2sru"
                     frameborder="0" style="min-height: 400px; border:0;" allowfullscreen="" aria-hidden="false"
                     tabindex="0"></iframe>
-                    <h6 bold>СТОМАТОЛОГИЯ АЗАМАТ </h6>
-            </div>
-
-            <!-- Second Map Column -->
-            
-            <div class="col-xl-4 col-lg-4 wow slideInUp" data-wow-delay="0.3s">
-                <iframe class="position-relative rounded w-100 h-100"
-                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1942.500078025687!2d82.9982850368937!3d55.040751465862385!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x42dfef38cd0266e5%3A0x169d5ab31c942822!2sUlitsa%20Dovatora%2C%2025%2C%20Novosibirsk%2C%20Novosibirskaya%20oblast&#39;%2C%20Russia%2C%20630124!5e0!3m2!1sen!2sus!4v1733681257940!5m2!1sen!2sus"
-                loading="lazy" frameborder="0" style="min-height: 400px; border:0;" allowfullscreen="" aria-hidden="false"
-                tabindex="0"></iframe>
-                <h6>СТОМАТОЛОГИЯ АТА-БАЛА</h6>
             </div>
         </div>
     </div>
@@ -507,21 +677,10 @@
                 </div>
         
                 <div class="col-lg-6">
-                    <h3 class="text-white text-center mb-2">Наши клиники</h3>
-                    <div class="row">
-                        <div class="col-md-6 mb-4">
-                            <h5 class="text-white">Стоматология Азамат</h5>
-                            <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>Улица Бориса Богаткова, 248а / улица Кошурникова, 45/1, г. Новосибирск</p>
-                            <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>stomazamat@gmail.com</p>
-                            <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+79837775454</p>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <h5 class="text-white">Стоматология Ата-Бала</h5>
-                            <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>Ул. Доватора, 25, г. Новосибирск</p>
-                            <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>stomazamat@gmail.com</p>
-                            <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+789529355454</p>
-                        </div>
-                    </div>
+                    <h5 class="text-white">Стоматология Азамат</h5>
+                    <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>Улица Бориса Богаткова, 248а / улица Кошурникова, 45/1, г. Новосибирск</p>
+                    <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>stomazamat@gmail.com</p>
+                    <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+7 981 000 0154</p>
                 </div>
                 
                 
@@ -558,6 +717,7 @@
         <!-- JS Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Note: Bootstrap JS loaded once here -->
         <script src="lib/wow/wow.min.js"></script>
         <script src="lib/easing/easing.min.js"></script>
         <script src="lib/waypoints/waypoints.min.js"></script>
@@ -569,14 +729,7 @@
         <script src="lib/twentytwenty/jquery.twentytwenty.js"></script>
 
         <!-- Custom JS -->
-        <!-- WOW.js -->
-        <script src="lib/wow/wow.min.js"></script>
-
-        <!-- Your main JS -->
         <script src="js/main.js"></script>
-
-        <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
-        <link rel="stylesheet" href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css">
 
 
         <script>
@@ -584,8 +737,48 @@
                 document.getElementById('spinner').classList.remove('show');
             });
         </script>
+
+        <!-- Counter animation -->
+        <script>
+            function animateCounters() {
+                document.querySelectorAll('.counter').forEach(counter => {
+                    const target = +counter.dataset.target;
+                    const duration = 1800;
+                    const step = target / (duration / 16);
+                    let current = 0;
+                    const timer = setInterval(() => {
+                        current += step;
+                        if (current >= target) { current = target; clearInterval(timer); }
+                        counter.textContent = Math.floor(current);
+                    }, 16);
+                });
+            }
+            const statsSection = document.querySelector('.counter');
+            if (statsSection) {
+                const observer = new IntersectionObserver(entries => {
+                    if (entries[0].isIntersecting) { animateCounters(); observer.disconnect(); }
+                }, { threshold: 0.3 });
+                observer.observe(statsSection.closest('.container-fluid'));
+            }
+        </script>
+
+    <!-- Sticky Mobile CTA Bar -->
+    <div class="d-flex d-lg-none position-fixed bottom-0 start-0 w-100 shadow-lg" style="z-index: 1050; background: #fff; border-top: 2px solid #06A3DA;">
+        <a href="tel:+79810000154" class="flex-fill btn btn-primary rounded-0 py-3 fw-semibold" style="font-size: 0.95rem;">
+            <i class="fa fa-phone-alt me-2"></i>Позвонить
+        </a>
+        <a href="https://wa.me/79810000154" target="_blank" class="flex-fill btn rounded-0 py-3 fw-semibold text-white" style="background:#25D366; font-size: 0.95rem;">
+            <i class="fab fa-whatsapp me-2"></i>WhatsApp
+        </a>
+        <a href="appointment.html" class="flex-fill btn btn-dark rounded-0 py-3 fw-semibold" style="font-size: 0.95rem;">
+            <i class="bi bi-calendar-check me-2"></i>Записаться
+        </a>
+    </div>
+    <!-- Sticky Mobile CTA End -->
+
 </body>
 
 
     
 </html>
+

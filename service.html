@@ -1,12 +1,12 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 
 <head>
     <meta charset="utf-8">
     <title>Стоматология Азамат</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
+    <meta name="keywords" content="Стоматология, Азамат, Новосибирск, услуги, лечение зубов, имплантация, протезирование">
+    <meta name="description" content="Услуги стоматологии Азамат — лечение, протезирование, имплантация, ортодонтия в Новосибирске">
 
     <!-- Favicon -->
     <link href="/favicon_io/favicon.ico" rel="icon" type="image/x-icon">
@@ -32,7 +32,6 @@
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <style>
         /* Fullscreen Video Background */
@@ -63,15 +62,15 @@
             object-fit: cover;
         }
     </style>
+</head>
 
+<body>
     <!-- Video Background -->
     <video class="video-background" autoplay muted loop>
         <source src="img/5356209-uhd_2160_3840_25fps.mp4" type="video/mp4">
         Ваш браузер не поддерживает видео тег.
     </video>
-</head>
 
-<body>
     <!-- Spinner Start -->
     <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
         <div class="spinner-grow text-primary m-1" role="status">
@@ -104,8 +103,8 @@
                     </div>
                     <div>
                         <i class="fa fa-phone-alt me-2"></i>
-                        <a href="tel:+79837775454" class="text-white text-decoration-none">
-                            +7 983 777 5454
+                        <a href="tel:+79810000154" class="text-white text-decoration-none">
+                            +7 981 000 0154
                         </a>
                     </div>
                 </div>
@@ -119,18 +118,23 @@
     <nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
         <a href="index.html" class="navbar-brand p-0 d-flex align-items-center">
             <img src="/img/label2.png" alt="Logo" class="img-fluid me-3" style="height: 75px;">
-            <h1 class="m-0 text-primary text-dark p-2.5">Стоматология Азамат</h1>
+            <h1 class="m-0 text-dark">Стоматология Азамат</h1>
         </a>
-        <div class="navbar-nav ms-auto py-0">
-            <a href="index.html" class="nav-item nav-link">Главное</a>
-            <a href="about.html" class="nav-item nav-link">О клинике</a>
-            <a href="service.html" class="nav-item nav-link active">Услуги</a>
-            <a href="contact.html" class="nav-item nav-link">Контакты</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto py-0">
+                <a href="index.html" class="nav-item nav-link">Главная</a>
+                <a href="about.html" class="nav-item nav-link">О клинике</a>
+                <a href="service.html" class="nav-item nav-link active">Услуги</a>
+                <a href="contact.html" class="nav-item nav-link">Контакты</a>
+            </div>
+            <a href="https://wa.me/79810000154" target="_blank" class="ms-3 d-flex align-items-center text-decoration-none">
+                <i class="fab fa-whatsapp fs-3" style="color: #25D366;"></i>
+            </a>
+            <a href="appointment.html" class="btn btn-primary py-2 px-4 ms-3">ЗАПИСАТЬСЯ НА ПРИЁМ</a>
         </div>
-        <a href="https://wa.me/79837775454" target="_blank" class="ms-3 d-flex align-items-center text-decoration-none">
-            <i class="fab fa-whatsapp fs-3" style="color: #25D366;"></i>
-        </a>
-        <a href="appointment.html" class="btn btn-primary py-2 px-4 ms-3">ЗАПИСАТЬСЯ НА ПРИЁМ</a>
     </nav>
     <!-- Navbar End -->
 
@@ -304,21 +308,10 @@
                 </div>
 
                 <div class="col-lg-6">
-                    <h3 class="text-white text-center mb-4">Наши клиники</h3>
-                    <div class="row">
-                        <div class="col-md-6 mb-4">
-                            <h5 class="text-white">Стоматология Азамат</h5>
-                            <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>Улица Бориса Богаткова, 248а / улица Кошурникова, 45/1, г. Новосибирск</p>
-                            <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>stomazamat@gmail.com</p>
-                            <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+79837775454</p>
-                        </div>
-                        <div class="col-md-6 mb-4">
-                            <h5 class="text-white">Стоматология Ата-Бала</h5>
-                            <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>Ул. Доватора, 25, г. Новосибирск</p>
-                            <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>stomazamat@gmail.com</p>
-                            <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+789529355454</p>
-                        </div>
-                    </div>
+                    <h5 class="text-white">Стоматология Азамат</h5>
+                    <p class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>Улица Бориса Богаткова, 248а / улица Кошурникова, 45/1, г. Новосибирск</p>
+                    <p class="mb-2"><i class="bi bi-envelope-open text-primary me-2"></i>stomazamat@gmail.com</p>
+                    <p class="mb-0"><i class="bi bi-telephone text-primary me-2"></i>+7 981 000 0154</p>
                 </div>
 
                 <!-- <div class="col-lg-3 col-md-6">
@@ -350,7 +343,7 @@
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="utf-8">
@@ -23,6 +23,10 @@
 
     <!-- Bootstrap -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
 
     <!-- Background Image Styling -->
     <style>
@@ -43,33 +47,7 @@
 </head>
 <body>
 
-  <div class="image-background">
-        <style>
-        /* Image background styling */
-        .image-background {
-            background-image: url('img/atabala.jpeg'); /* Replace with your image path */
-            background-size: cover; /* Ensures the image covers the entire viewport */
-            background-position: center center; /* Centers the image */
-            background-attachment: fixed; /* Makes the background image stay in place when scrolling */
-            position: fixed;
-            opacity: 0.2;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 150%;
-            z-index: -1; /* Keeps the image behind your content */
-        }
-
-        /* Sample content styling */
-        .content {
-            position: relative;
-            z-index: 1;
-            color: white;
-            text-align: center;
-            padding: 50px;
-        }
-        </style>
-    </div>
+  <div class="image-background"></div>
 
 <!-- Topbar -->
 <div class="container-fluid bg-white ps-5 pe-0 d-none d-lg-block">
@@ -85,7 +63,7 @@
                     <i class="fa fa-envelope-open me-2"></i>stomazamat@gmail.com
                 </div>
                 <div>
-                    <i class="fa fa-phone-alt me-2"></i>+79837775454
+                    <i class="fa fa-phone-alt me-2"></i>+7 981 000 0154
                 </div>
             </div>
         </div>
@@ -93,21 +71,26 @@
 </div>
 
 <!-- Navbar -->
-<nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3 py-lg-0">
+<nav class="navbar navbar-expand-lg bg-white navbar-light shadow-sm px-5 py-3">
     <a href="index.html" class="navbar-brand p-0 d-flex align-items-center">
         <img src="/img/label2.png" alt="Logo" style="height: 75px;" class="me-3">
         <h1 class="m-0 text-dark">Стоматология Азамат</h1>
     </a>
-    <div class="navbar-nav ms-auto">
-        <a href="index.html" class="nav-item nav-link">Главная</a>
-        <a href="about.html" class="nav-item nav-link active">О клинике</a>
-        <a href="service.html" class="nav-item nav-link">Услуги</a>
-        <a href="contact.html" class="nav-item nav-link">Контакты</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto">
+            <a href="index.html" class="nav-item nav-link">Главная</a>
+            <a href="about.html" class="nav-item nav-link active">О клинике</a>
+            <a href="service.html" class="nav-item nav-link">Услуги</a>
+            <a href="contact.html" class="nav-item nav-link">Контакты</a>
+        </div>
+        <a href="https://wa.me/79810000154" target="_blank" class="ms-3">
+            <i class="fab fa-whatsapp fs-3" style="color: #25D366;"></i>
+        </a>
+        <a href="appointment.html" class="btn btn-primary ms-3">Записаться</a>
     </div>
-    <a href="https://wa.me/79837775454" target="_blank" class="ms-3">
-        <i class="fab fa-whatsapp fs-3" style="color: #25D366;"></i>
-    </a>
-    <a href="appointment.html" class="btn btn-primary ms-3">Записаться</a>
 </nav>
 
 <!-- Hero -->
@@ -137,7 +120,7 @@
                 <div class="row g-3">
                     <div class="col-sm-6">
                         <h5><i class="fa fa-check-circle text-primary me-3"></i>Более 40 лет опыта</h5>
-                        <h5><i class="fa fa-check-circle text-primary me-3"></i>14 лет в «Ата-Бала»</h5>
+                        <h5><i class="fa fa-check-circle text-primary me-3"></i>С 2010 года в Новосибирске</h5>
                         <h5><i class="fa fa-check-circle text-primary me-3"></i>50 000+ довольных пациентов</h5>
                     </div>
                     <div class="col-sm-6">

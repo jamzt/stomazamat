@@ -1,6 +1,4 @@
    // Initiate the wowjs
-   new WOW().init();
-
    if (typeof WOW !== 'undefined') {
     new WOW().init();
 }
@@ -123,30 +121,18 @@
     $(".testimonial-carousel").owlCarousel({
         autoplay: true,
         smartSpeed: 1000,
-        items: 1,
         dots: false,
         loop: true,
-        nav : true,
-        navText : [
+        nav: true,
+        navText: [
             '<i class="bi bi-arrow-left"></i>',
             '<i class="bi bi-arrow-right"></i>'
         ],
+        responsive: {
+            0:   { items: 1 },
+            768: { items: 2 }
+        }
     });
     
 })(jQuery);
-
-
-fetch(form.action, {
-    method: "POST",
-    headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-        clinic: form.clinic.value,
-        name: form.name.value,
-        phone: form.phone.value,
-        message: form.message.value
-    })
-})
 
