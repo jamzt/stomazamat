@@ -72,15 +72,43 @@
             text-shadow: none;
         }
         .hero-section .col-lg-8 {
-            background: linear-gradient(160deg, #ffffff 60%, #e8f7fd 100%);
-            border-radius: 1rem;
-            padding: 2.5rem 2.5rem;
-            border-top: 4px solid #06A3DA;
+            background: linear-gradient(160deg, rgba(255,255,255,0.97) 60%, rgba(232,247,253,0.95) 100%);
+            border-radius: 1.5rem;
+            padding: 3rem 3rem;
+            border-top: 5px solid #06A3DA;
+            box-shadow: 0 20px 60px rgba(6,163,218,0.15), 0 4px 20px rgba(0,0,0,0.08);
+            animation: heroFloat 4s ease-in-out infinite;
+        }
+        @keyframes heroFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
         }
         @media (max-width: 576px) {
             .hero-section .col-lg-8 {
-                padding: 1.8rem 1.2rem;
+                padding: 2rem 1.4rem;
+                animation: none;
             }
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(6,163,218,0.1);
+            border: 1px solid rgba(6,163,218,0.3);
+            border-radius: 2rem;
+            padding: 0.35rem 1rem;
+            font-size: 0.78rem;
+            color: #06A3DA;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        .hero-divider {
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #06A3DA, #0481ae);
+            border-radius: 2px;
+            margin: 1rem auto;
         }
 
         /* Stats strip hover */
@@ -183,12 +211,15 @@
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-10">
-                        <p class="fw-semibold text-uppercase mb-3" style="letter-spacing: 4px; font-size: 0.8rem; color: #06A3DA;">Новосибирск</p>
-                        <h1 class="display-4 fw-bold mb-3" style="line-height: 1.2; color: #1a1a1a; text-transform: uppercase; letter-spacing: 1px;">Ваша здоровая улыбка —<br>наша забота</h1>
-                        <p class="mb-4" style="font-size: 1rem; color: #6c757d;">Семейная клиника · Более 50 000 пациентов · Работаем без выходных</p>
+                        <div class="hero-badge mb-3">
+                            <i class="bi bi-geo-alt-fill"></i> Новосибирск
+                        </div>
+                        <div class="hero-divider"></div>
+                        <h1 class="fw-bold mb-3" style="font-size: clamp(1.8rem, 4vw, 3rem); line-height: 1.2; color: #1a1a1a; text-transform: uppercase; letter-spacing: 1px;">Ваша здоровая улыбка —<br><span style="color: #06A3DA;">наша забота</span></h1>
+                        <p class="mb-4" style="font-size: 1.05rem; color: #5a6a72;">Семейная клиника · Более 50&nbsp;000 пациентов · Работаем без выходных</p>
                         <div class="d-flex flex-wrap gap-3 justify-content-center">
-                            <a href="appointment.html" class="btn btn-primary btn-lg px-5 py-3">Записаться онлайн</a>
-                            <a href="tel:+79810000154" class="btn btn-outline-dark btn-lg px-4 py-3">
+                            <a href="appointment.html" class="btn btn-primary btn-lg px-5 py-3 shadow-sm" style="border-radius: 2rem;">📅 Записаться онлайн</a>
+                            <a href="tel:+79810000154" class="btn btn-outline-primary btn-lg px-4 py-3" style="border-radius: 2rem;">
                                 <i class="fa fa-phone-alt me-2"></i>Позвонить
                             </a>
                         </div>
